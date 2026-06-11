@@ -50,3 +50,6 @@ next-env.d.ts
 .env.*
 .nodemon
 nodemon.json
+
+# ignore scratch scripts (contains db scripts)
+scratch/
