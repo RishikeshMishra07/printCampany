@@ -14,10 +14,16 @@ const execAsync = util.promisify(exec);
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false }
+  ssl: { rejectUnauthorized: false },
+  idleTimeoutMillis: 3000, // Close idle connections after 3 seconds to prevent Neon ECONNRESET
+  connectionTimeoutMillis: 10000,
 });
 
-pool.on('error', (err) => {
+pool.on('error', (err: any) => {
+  if (err.code === 'ECONNRESET') {
+    // Ignore ECONNRESET logs on idle clients
+    return;
+  }
   console.error('Unexpected error on idle database client', err);
 });
 
@@ -489,8 +495,10 @@ async function startWorker() {
         }
         isProcessing = false;
       }
-    } catch (err) {
-      console.error('Fatal Poller Error:', err);
+    } catch (err: any) {
+      if (err.code !== 'ECONNRESET') {
+        console.error('Fatal Poller Error:', err);
+      }
       isProcessing = false;
     }
   }, 5000);

@@ -7,7 +7,14 @@ neonConfig.webSocketConstructor = ws;
 // Create a single connection pool to the database using Neon Serverless
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false }
+  ssl: { rejectUnauthorized: false },
+  idleTimeoutMillis: 3000,
+  connectionTimeoutMillis: 10000,
+});
+
+pool.on('error', (err: any) => {
+  if (err.code === 'ECONNRESET') return;
+  console.error('Unexpected error on idle client', err);
 });
 
 // Helper function to easily run SQL queries from your API routes

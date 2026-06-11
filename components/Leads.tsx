@@ -1607,7 +1607,23 @@ const Leads = ({ duplicateOnly }: { duplicateOnly?: boolean }) => {
     return k === 'eligible_for_update' || k === 'eligible_upgrade' || k === 'alt_mobile' || k === 'alt mobile' || k === 'alt_mobile_2' || k === 'alt_mobile_3' || k === 'alt_mobile_4';
   };
 
-  const tableCols = applyOrder(leadColumns.filter(c => c.visible !== false && !excluded(c)));
+  const tableCols = [
+    { key: 'account_no', label: 'Order ID' },
+    { key: 'name', label: 'Customer Name' },
+    { key: 'outstanding', label: 'Amount Paid', type: 'amount' },
+    { key: 'product', label: 'Service Type' },
+    { key: 'employee_code', label: 'Staff ID' },
+    { key: 'client', label: 'Corporate Client' },
+    { key: 'bucket', label: 'Priority/Stage' },
+    { key: 'location', label: 'Branch/Location' },
+    { key: 'payment_mode', label: 'Payment Mode' },
+    { key: 'tl_name', label: 'Supervisor' },
+    { key: 'employee_name', label: 'Operator Name' },
+    { key: 'aph', label: 'Output Rate' },
+    { key: 'ph', label: 'Machine Hours' },
+    { key: 'mobile', label: 'Phone No' },
+    { key: 'upload_at', label: 'Order Date' }
+  ];
   const profileCols = applyOrder(leadColumns.filter(c => c.showInProfile !== false && !excluded(c)));
 
   const RaiseSettlementModal = ({ lead, onDone }: { lead: any, onDone: () => void }) => {
@@ -2155,19 +2171,22 @@ const Leads = ({ duplicateOnly }: { duplicateOnly?: boolean }) => {
           }
         }
       `}</style>
-      <div id="pg-leads" className="page on flex-1 flex flex-col overflow-hidden" style={{ height: '100%' }}>
-        <div className="leads-wrapper" style={{ flex: 1 }}>
+      <div id="pg-leads" className="page on flex-1 flex flex-col overflow-hidden bg-background" style={{ height: '100%' }}>
+        <div className="leads-wrapper" style={{ flex: 1, padding: '16px', gap: '16px' }}>
           {/* CUSTOMER DASHBOARD HEADER */}
           {!isTableMaximized && (
-            <div id="custDash" className="cust-dash filled" style={{ background: 'var(--bg2)', borderBottom: '1px solid var(--bdr)' }}>
+            <div id="custDash" className="cust-dash filled relative overflow-hidden rounded-2xl bg-card/80 backdrop-blur-xl border border-white/10 dark:border-white/5 shadow-lg">
+              {/* Subtle gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 pointer-events-none" />
+              
               {/* Header */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
+              <div className="relative z-10 flex justify-between items-center mb-6">
                 <div>
-                  <h1 style={{ fontSize: 24, fontWeight: 800, color: 'var(--txt)', margin: '0 0 4px 0' }}>
-                    {duplicateOnly ? 'Duplicate Records' : 'Leads Management'}
+                  <h1 className="text-3xl font-extrabold tracking-tight text-foreground bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70 mb-1">
+                    {duplicateOnly ? 'Duplicate Records' : 'Live Operations'}
                   </h1>
-                  <p style={{ fontSize: 12, color: 'var(--txt3)', margin: 0 }}>
-                    {duplicateOnly ? 'View and manage duplicate file uploads' : 'View, filter, and manage your uploaded leads'}
+                  <p className="text-sm font-medium text-muted-foreground">
+                    {duplicateOnly ? 'Manage duplicate entries and file conflicts' : 'Real-time overview of active processes and records'}
                   </p>
                 </div>
               </div>
@@ -2342,13 +2361,13 @@ const Leads = ({ duplicateOnly }: { duplicateOnly?: boolean }) => {
           )}
 
           {/* SEARCH BAR */}
-          <div className="sbar" style={{ padding: '8px 16px', borderBottom: '1px solid var(--bdr)', display: 'flex', gap: 8, alignItems: 'center' }}>
+          <div className="sbar relative z-10 flex gap-3 items-center p-3 sm:p-4 bg-card border border-border rounded-xl shadow-sm transition-all" style={{ marginBottom: showFilters ? '0' : '16px' }}>
             <SButton size="slim" variant="secondary" onClick={() => setShowFilters(!showFilters)}>⊞ More {showFilters ? '▲' : '▼'}</SButton>
-            <span style={{ fontSize: 12, color: 'var(--txt3)', marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 10 }}>
-              {leads.length} records
+            <span className="text-xs text-muted-foreground ml-auto flex items-center gap-3">
+              <span className="hidden sm:inline font-medium">{leads.length} records</span>
               <button
                 onClick={() => setIsTableMaximized(!isTableMaximized)}
-                style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--txt2)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4px', borderRadius: 4, transition: '0.2s', backgroundColor: 'var(--bg3)' }}
+                className="flex items-center justify-center p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted bg-transparent border border-transparent hover:border-border transition-all cursor-pointer"
                 title={isTableMaximized ? "Restore Layout" : "Maximize Table"}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -2445,9 +2464,9 @@ const Leads = ({ duplicateOnly }: { duplicateOnly?: boolean }) => {
           )}
 
           {/* RESULTS AREA */}
-          <div className="result-area hide-scrollbar" style={{ flex: 1, overflow: 'auto', background: 'var(--bg2)' }}>
-            <div className="result-area-mobile-scroll">
-              <table className="tbl" style={{ width: '100%', borderCollapse: 'collapse', whiteSpace: 'nowrap' }}>
+          <div className="result-area hide-scrollbar rounded-xl border border-border bg-card shadow-sm overflow-hidden" style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+            <div className="result-area-mobile-scroll" style={{ flex: 1, overflow: 'auto' }}>
+              <table className="tbl w-full border-collapse whitespace-nowrap">
                 <thead>
                   <tr style={{ borderBottom: '1px solid var(--bdr)' }}>
                     {tableCols.length > 0 ? tableCols.map(col => (

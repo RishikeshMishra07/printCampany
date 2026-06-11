@@ -51,15 +51,15 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-sm sm:max-w-md lg:max-w-[350px] bg-background lg:bg-transparent rounded-2xl lg:rounded-none shadow-2xl lg:shadow-none border border-border lg:border-transparent p-6 sm:p-10 lg:p-0 grid gap-8 transition-all">
+    <div className="mx-auto w-full max-w-sm sm:max-w-md lg:max-w-[350px] bg-background lg:bg-transparent rounded-2xl lg:rounded-none shadow-xl lg:shadow-none border border-border lg:border-transparent p-5 sm:p-8 lg:p-0 grid gap-6 sm:gap-8 transition-all">
       <div className="grid gap-2 text-center">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">Login</h1>
-        <p className="text-muted-foreground text-sm sm:text-base">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">Login</h1>
+        <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
           Enter your credentials below to access your dashboard
         </p>
       </div>
 
-      <form onSubmit={handleLogin} className="grid gap-6">
+      <form onSubmit={handleLogin} className="grid gap-5 sm:gap-6">
 
         {/* Custom Shadcn-like Tabs for Role */}
         <div className="grid gap-2">
@@ -67,6 +67,7 @@ export default function LoginForm() {
           <div className="inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground w-full">
             <button
               type="button"
+              suppressHydrationWarning
               onClick={() => setUserType('user')}
               className={`inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-all ${userType === 'user' ? 'bg-background text-foreground shadow-sm' : 'hover:text-foreground'
                 } w-1/2`}
@@ -75,6 +76,7 @@ export default function LoginForm() {
             </button>
             <button
               type="button"
+              suppressHydrationWarning
               onClick={() => setUserType('admin')}
               className={`inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-all ${userType === 'admin' ? 'bg-background text-foreground shadow-sm' : 'hover:text-foreground'
                 } w-1/2`}
@@ -90,6 +92,7 @@ export default function LoginForm() {
             <label className="text-sm font-medium leading-none text-foreground">Department</label>
             <select
               required
+              suppressHydrationWarning
               value={department}
               onChange={(e) => setDepartment(e.target.value)}
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
@@ -109,6 +112,7 @@ export default function LoginForm() {
           <input
             type="text"
             required
+            suppressHydrationWarning
             placeholder="Enter your Emp ID"
             value={authData.employee_id}
             onChange={e => setAuthData({ ...authData, employee_id: e.target.value })}
@@ -128,6 +132,7 @@ export default function LoginForm() {
             <input
               type={showPwd ? "text" : "password"}
               required
+              suppressHydrationWarning
               placeholder="••••••••"
               value={authData.password}
               onChange={e => setAuthData({ ...authData, password: e.target.value })}
@@ -136,6 +141,7 @@ export default function LoginForm() {
             />
             <button
               type="button"
+              suppressHydrationWarning
               className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-medium text-muted-foreground hover:text-foreground"
               onClick={() => setShowPwd(!showPwd)}
             >
@@ -147,6 +153,7 @@ export default function LoginForm() {
         {/* Submit Button */}
         <button
           type="submit"
+          suppressHydrationWarning
           disabled={isLoading}
           className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full mt-2"
         >

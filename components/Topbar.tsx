@@ -96,7 +96,8 @@ const Topbar: React.FC<TopbarProps> = ({ user, activePage, logout, toggleMobileM
             </svg>
           </button>
         )}
-        <span className="font-bold tracking-tight text-foreground">Daily Paid File IMS</span>
+        <span className="font-bold tracking-tight text-foreground truncate hidden sm:inline-block">AutoPrint Workshop</span>
+        <span className="font-bold tracking-tight text-foreground truncate sm:hidden">AutoPrint</span>
       </div>
       <div className="ml-auto flex items-center gap-2">
         <div className="relative">
@@ -104,7 +105,8 @@ const Topbar: React.FC<TopbarProps> = ({ user, activePage, logout, toggleMobileM
             onClick={() => setShowNotifs(!showNotifs)}
             className="px-2 py-1.5 border border-border rounded-md text-xs font-semibold text-foreground bg-muted transition-all cursor-pointer relative flex items-center gap-1.5"
           >
-            <span>Notification</span>
+            <span className="hidden sm:inline">Notification</span>
+            <span className="sm:hidden">Notifs</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
               <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
@@ -117,30 +119,40 @@ const Topbar: React.FC<TopbarProps> = ({ user, activePage, logout, toggleMobileM
           </button>
 
           {showNotifs && (
-            <div className="absolute top-[120%] right-0 w-[550px] bg-card border border-border rounded-lg shadow-2xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-150">
-              <div className="px-4 py-2.5 border-b border-border flex justify-between items-center bg-muted/40">
-                <span className="text-xs font-bold text-foreground">Notifications</span>
-                <button onClick={clearNotifs} className="text-[10px] text-destructive hover:underline bg-transparent border-none cursor-pointer font-medium">Clear All</button>
-              </div>
-              <div className="max-h-[400px] overflow-y-auto divide-y divide-border/20">
-                {notifications.length === 0 ? (
-                  <div className="p-5 text-center text-muted-foreground text-[11px]">
-                    No new notifications
-                  </div>
-                ) : (
-                  notifications.map((n, i) => (
-                    <div key={i} className="px-4 py-3 flex items-center gap-3 hover:bg-muted/30 transition-colors">
-                      <div className="flex-1 flex items-center gap-2 overflow-hidden text-xs">
-                        <span className="font-semibold text-primary whitespace-nowrap">{n.title}</span>
-                        <span className="text-muted-foreground">•</span>
-                        <span className="text-foreground truncate" title={n.message}>{n.message}</span>
-                        <span className="text-muted-foreground">•</span>
-                        <span className="text-muted-foreground font-mono">A/C: {n.account}</span>
-                      </div>
-                      <span className="text-[10px] text-muted-foreground whitespace-nowrap flex-shrink-0">{n.time}</span>
+            <div className="absolute top-[calc(100%+12px)] -right-16 sm:right-0 w-[320px] sm:w-[380px] bg-card border border-border rounded-xl shadow-2xl z-50 overflow-visible animate-in fade-in slide-in-from-top-2 duration-150">
+              {/* Pointer Arrow */}
+              <div className="absolute -top-1.5 right-[75px] sm:right-[30px] w-2.5 h-2.5 bg-card border-l border-t border-border rotate-45 z-10" />
+              
+              <div className="relative z-20 flex flex-col rounded-xl overflow-hidden bg-card">
+                <div className="px-4 py-3 border-b border-border flex justify-between items-center bg-muted/40">
+                  <span className="text-xs font-bold text-foreground">Notifications</span>
+                  <button onClick={clearNotifs} className="text-[10px] text-destructive hover:underline bg-transparent border-none cursor-pointer font-medium">Clear All</button>
+                </div>
+                <div className="max-h-[350px] overflow-y-auto divide-y divide-border/20">
+                  {notifications.length === 0 ? (
+                    <div className="p-6 flex flex-col items-center justify-center text-center text-muted-foreground gap-2">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-50">
+                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+                      </svg>
+                      <span className="text-xs font-medium">No new notifications</span>
                     </div>
-                  ))
-                )}
+                  ) : (
+                    notifications.map((n, i) => (
+                      <div key={i} className="px-4 py-3 flex items-start gap-3 hover:bg-muted/30 transition-colors">
+                        <div className="w-2 h-2 mt-1.5 rounded-full bg-primary flex-shrink-0" />
+                        <div className="flex-1 flex flex-col min-w-0">
+                          <div className="flex justify-between items-start gap-2 mb-0.5">
+                            <span className="font-semibold text-primary text-xs truncate">{n.title}</span>
+                            <span className="text-[9px] text-muted-foreground whitespace-nowrap">{n.time}</span>
+                          </div>
+                          <p className="text-[11px] text-foreground leading-snug line-clamp-2" title={n.message}>{n.message}</p>
+                          <span className="text-muted-foreground font-mono text-[9px] mt-1">Ref: {n.account}</span>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
               </div>
             </div>
           )}

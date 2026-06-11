@@ -55,7 +55,15 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <Topbar 
               user={user} 
               activePage={activePage} 
-              logout={() => { router.push('/'); }} 
+              logout={async () => { 
+                try {
+                  await fetch('/api/auth/logout', { method: 'POST' });
+                  router.push('/'); 
+                } catch (e) {
+                  console.error('Logout failed', e);
+                  router.push('/');
+                }
+              }} 
               toggleMobileMenu={() => setMobileMenuOpen(!mobileMenuOpen)} 
               toggleSidebar={toggleSidebar}
             />
