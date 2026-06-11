@@ -3,21 +3,22 @@ import nodemailer from 'nodemailer';
 const transporter = nodemailer.createTransport(
   process.env.EMAIL_USER && process.env.EMAIL_PASS
     ? {
-        service: 'gmail',
-        auth: {
-          user: process.env.EMAIL_USER,
-          pass: process.env.EMAIL_PASS,
-        },
-      }
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    }
+
     : {
-        host: process.env.SMTP_HOST || 'smtp.ethereal.email',
-        port: parseInt(process.env.SMTP_PORT || '587'),
-        secure: process.env.SMTP_SECURE === 'true',
-        auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASS,
-        },
-      }
+      host: process.env.SMTP_HOST || 'smtp.ethereal.email',
+      port: parseInt(process.env.SMTP_PORT || '587'),
+      secure: process.env.SMTP_SECURE === 'true',
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    }
 );
 
 export async function sendReminderEmail(toEmail: string, phName: string, date: string) {
@@ -72,9 +73,9 @@ export async function sendAdminSummaryEmail(adminEmails: string[], date: string,
         <td style="padding: 12px 10px; border-bottom: 1px solid #eee; color: #333;">${u.name || 'Unknown'}</td>
         <td style="padding: 12px 10px; border-bottom: 1px solid #eee; color: #555;">${u.employee_id}</td>
         <td style="padding: 12px 10px; border-bottom: 1px solid #eee; text-align: center;">
-          ${isMissed 
-            ? '<span style="color: #d32f2f; background: #ffebee; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold;">⚠️ Missed</span>'
-            : '<span style="color: #1976d2; background: #e3f2fd; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold;">✅ Uploaded</span>'}
+          ${isMissed
+        ? '<span style="color: #d32f2f; background: #ffebee; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold;">⚠️ Missed</span>'
+        : '<span style="color: #1976d2; background: #e3f2fd; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold;">✅ Uploaded</span>'}
         </td>
       </tr>
     `;
