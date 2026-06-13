@@ -21,7 +21,7 @@ export default function LoginForm() {
           employee_id: authData.employee_id,
           password: authData.password,
           role: userType,
-          department: userType === 'user' ? department : null
+          department: department
         })
       });
 
@@ -31,12 +31,16 @@ export default function LoginForm() {
         alert(`Welcome, ${data.user.name || data.user.employee_id}!`);
         if (data.user.role === 'user') {
           const dept = data.user.department_name || department;
-          let path = 'general';
-          if (dept === 'Printing') path = 'printing';
-          else if (dept === 'Quality Control (QC)') path = 'qc';
-          else if (dept === 'Dispatch') path = 'dispatch';
-
-          router.push(`/dashboard/${path}`);
+          if (dept === 'Printing') {
+            router.push('/dashboard/live-records/printing');
+          } else if (dept === 'Quality Control (QC)') {
+            router.push('/dashboard/live-records/qc');
+          } else if (dept === 'Dispatch') {
+            router.push('/dashboard/live-records/dispatch');
+          } else {
+            // Store department → goes to Live Stock
+            router.push('/dashboard/live-stock/general');
+          }
         } else {
           router.push('/dashboard');
         }
@@ -86,25 +90,20 @@ export default function LoginForm() {
           </div>
         </div>
 
-        {/* Department Dropdown (Only for Users) */}
-        {userType === 'user' && (
-          <div className="grid gap-2">
-            <label className="text-sm font-medium leading-none text-foreground">Department</label>
-            <select
-              required
-              suppressHydrationWarning
-              value={department}
-              onChange={(e) => setDepartment(e.target.value)}
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-            >
-              <option value="">Select Department</option>
-              <option value="Printing">Printing</option>
-              <option value="QC">Quality Control (QC)</option>
-              <option value="Dispatch">Dispatch</option>
-              <option value="Management">Management</option>
-            </select>
-          </div>
-        )}
+        {/* Department Dropdown (For Both User and Admin) */}
+        <div className="grid gap-2">
+          <label className="text-sm font-medium leading-none text-foreground">Department</label>
+          <select
+            required
+            suppressHydrationWarning
+            value={department}
+            onChange={(e) => setDepartment(e.target.value)}
+            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          >
+            <option value="">Select Department</option>
+            <option value="Store">Store</option>
+          </select>
+        </div>
 
         {/* Emp ID Input */}
         <div className="grid gap-2">

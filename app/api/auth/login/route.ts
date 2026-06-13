@@ -46,7 +46,8 @@ export async function POST(request: Request) {
         ('Printing'), 
         ('Quality Control (QC)'), 
         ('Dispatch'), 
-        ('Management')
+        ('Management'),
+        ('Store')
       ON CONFLICT (name) DO NOTHING;
 
       -- Seed Default Users
@@ -54,7 +55,8 @@ export async function POST(request: Request) {
       VALUES 
         ('ims7191', 'Ankit (Manager)', 'admin_user', 'Admin@123', 'admin', (SELECT id FROM departments WHERE name='Management')), 
         ('AP-101', 'Ankit (Operator)', 'operator_01', 'pass123', 'user', (SELECT id FROM departments WHERE name='Printing')),
-        ('AP-102', 'Raju (QC Inspector)', 'qc_01', 'pass123', 'user', (SELECT id FROM departments WHERE name='Quality Control (QC)'))
+        ('AP-102', 'Raju (QC Inspector)', 'qc_01', 'pass123', 'user', (SELECT id FROM departments WHERE name='Quality Control (QC)')),
+        ('ST-001', 'Mohan (Store)', 'store_01', 'Store@123', 'user', (SELECT id FROM departments WHERE name='Store'))
       ON CONFLICT (username) DO UPDATE 
       SET password = EXCLUDED.password, employee_id = EXCLUDED.employee_id;
 
@@ -85,11 +87,12 @@ export async function POST(request: Request) {
 
     if (result.rows.length > 0) {
       const user = result.rows[0];
-      
+      const sessionDept = (role === 'admin' && department) ? department : (user.department_name || null);
+
       const response = NextResponse.json({ success: true, message: 'Login successful', user });
       
       // Create a secure HttpOnly session cookie
-      response.cookies.set('auth_session', JSON.stringify({ id: user.id, employee_id: user.employee_id, name: user.name, username: user.username, role: user.role, department: user.department_name || null }), {
+      response.cookies.set('auth_session', JSON.stringify({ id: user.id, employee_id: user.employee_id, name: user.name, username: user.username, role: user.role, department: sessionDept }), {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         maxAge: 60 * 60 * 24, // 1 day

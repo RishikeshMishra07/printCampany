@@ -4,14 +4,13 @@ import { cookies } from 'next/headers';
 export async function GET() {
   try {
     const cookieStore = await cookies();
-    const sessionCookie = cookieStore.get('auth_session');
-    
-    if (sessionCookie && sessionCookie.value) {
-      const user = JSON.parse(sessionCookie.value);
-      return NextResponse.json({ success: true, user });
+    const session = cookieStore.get('auth_session');
+    if (!session) {
+      return NextResponse.json({ success: false, message: 'Not authenticated' }, { status: 401 });
     }
-    return NextResponse.json({ success: false, user: null });
-  } catch (error) {
-    return NextResponse.json({ success: false, user: null });
+    const user = JSON.parse(session.value);
+    return NextResponse.json({ success: true, user });
+  } catch (error: any) {
+    return NextResponse.json({ success: false, message: error.message }, { status: 500 });
   }
 }

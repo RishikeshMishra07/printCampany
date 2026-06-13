@@ -1,7 +1,5 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { ButtonGroup, Button } from '@shopify/polaris';
-import { LayoutGrid, Users, Phone, UploadCloud, BarChart2, Settings, LineChart, Database } from 'lucide-react';
 
 interface SidebarProps {
   activePage: string;
@@ -12,138 +10,165 @@ interface SidebarProps {
   toggleCollapse?: () => void;
 }
 
+type NavItem = { id: string; label: string; link: string; icon: string };
+type NavGroup = { section: string; items: NavItem[] };
+
 const Sidebar: React.FC<SidebarProps> = ({ activePage, setActivePage, user, isMobileOpen, isCollapsed, toggleCollapse }) => {
   const [mounted, setMounted] = useState(false);
+  const [currentPath, setCurrentPath] = useState('');
 
-  // Use a small timeout to ensure the state is applied before enabling transitions
   useEffect(() => {
     const timer = setTimeout(() => setMounted(true), 50);
+    setCurrentPath(window.location.pathname);
     return () => clearTimeout(timer);
   }, []);
 
   const deptPath = user?.role === 'user'
-    ? (user.department === 'Printing' ? 'printing' : user.department === 'Quality Control (QC)' ? 'qc' : user.department === 'Dispatch' ? 'dispatch' : 'general')
+    ? (user.department === 'Store' ? 'general'
+      : user.department === 'Printing' ? 'printing'
+      : user.department === 'Quality Control (QC)' ? 'qc'
+      : user.department === 'Dispatch' ? 'dispatch'
+      : 'general')
     : '';
 
-  const navItems = [
+  // ── ADMIN NAV ──────────────────────────────────────────────────────
+  const adminNav: NavGroup[] = [
     {
-      id: 'dashboard', 
-      label: 'Dashboard', 
-      section: 'OPERATIONS', 
-      link: user?.role === 'user' ? `/dashboard/${deptPath}` : '/dashboard',
-      Icon: LayoutGrid, 
-      color: 'text-blue-500'
+      section: 'OVERVIEW',
+      items: [
+        { id: 'dashboard',          label: 'Dashboard',          link: '/dashboard',                    icon: '🏠' },
+        { id: 'inventory',          label: 'Inventory Overview', link: '/dashboard/inventory',          icon: '📊' },
+        { id: 'daily-report',       label: 'Daily Report',       link: '/dashboard/daily-report',       icon: '📅' },
+      ],
     },
     {
-      id: 'live-records', 
-      label: 'Live Records', 
-      section: 'OPERATIONS', 
-      hasDot: true, 
-      link: user?.role === 'user' ? `/dashboard/live-records/${deptPath}` : '/dashboard/live-records',
-      Icon: Users, 
-      color: 'text-green-500'
+      section: 'DEALS & WIP',
+      items: [
+        { id: 'deals',              label: 'Deals & Contracts',  link: '/dashboard/deals',              icon: '🤝' },
+        { id: 'wip',                label: 'WIP Tracking',       link: '/dashboard/wip',                icon: '🎨' },
+        { id: 'reports-deal',       label: 'Deal Consumption',   link: '/dashboard/reports/deal',       icon: '📉' },
+      ],
     },
     {
-      id: 'upload', 
-      label: 'Upload Data', 
-      section: 'MANAGEMENT', 
-      roles: ['admin', 'user'], 
-      link: user?.role === 'user' ? `/dashboard/upload/${deptPath}` : '/dashboard/upload',
-      Icon: UploadCloud, 
-      color: 'text-purple-500'
+      section: 'MASTER DATA',
+      items: [
+        { id: 'master-data',        label: 'Items',              link: '/dashboard/master-data',        icon: '📦' },
+        { id: 'paint-norms',        label: 'Paint Norms',        link: '/dashboard/paint-norms',        icon: '🖌️' },
+        { id: 'vendors',            label: 'Vendors',            link: '/dashboard/vendors',            icon: '🏭' },
+      ],
     },
     {
-      id: 'duplicate', 
-      label: 'Duplicate Records', 
-      section: 'MANAGEMENT', 
-      link: user?.role === 'user' ? `/dashboard/duplicate/${deptPath}` : '/dashboard/duplicate',
-      Icon: Users, 
-      color: 'text-amber-500'
+      section: 'STOCK',
+      items: [
+        { id: 'purchase-requests',  label: 'Purchase Requests',  link: '/dashboard/purchase-requests',  icon: '📋' },
+        { id: 'stock-count',        label: 'Physical Count',     link: '/dashboard/stock-count',        icon: '🔢' },
+        { id: 'audit',              label: 'Audit Logs',         link: '/dashboard/audit',              icon: '📜' },
+      ],
     },
     {
-      id: 'record-list', 
-      label: 'Record List', 
-      section: 'MANAGEMENT', 
-      link: user?.role === 'user' ? `/dashboard/record-list/${deptPath}` : '/dashboard/record-list',
-      Icon: Database, 
-      color: 'text-blue-500'
+      section: 'SYSTEM',
+      items: [
+        { id: 'admin',              label: 'User Management',    link: '/dashboard/admin',              icon: '👤' },
+      ],
     },
-    {
-      id: 'admin', 
-      label: 'Admin Panel', 
-      section: 'MANAGEMENT', 
-      roles: ['admin'], 
-      link: '/dashboard/admin',
-      Icon: Settings, 
-      color: 'text-indigo-500'
-    },
-    {
-      id: 'audit', 
-      label: 'Audit Logs', 
-      section: 'MANAGEMENT', 
-      roles: ['admin'], 
-      link: '/dashboard/audit',
-      Icon: LineChart, 
-      color: 'text-rose-500'
-    }
   ];
 
-  const sections = ['OPERATIONS', 'MANAGEMENT'];
+  // ── USER (STORE) NAV ───────────────────────────────────────────────
+  const userNav: NavGroup[] = [
+    {
+      section: 'MY WORK',
+      items: [
+        { id: 'live-stock',         label: 'Live Stock',         link: `/dashboard/live-stock/${deptPath}`,  icon: '📦' },
+        { id: 'daily-report',       label: 'Daily Report',       link: '/dashboard/daily-report',            icon: '📅' },
+        { id: 'wip',                label: 'WIP Board',          link: '/dashboard/wip',                     icon: '🎨' },
+      ],
+    },
+    {
+      section: 'TRANSACTIONS',
+      items: [
+        { id: 'inward',             label: 'Inward (GRN)',       link: `/dashboard/inward/${deptPath}`,      icon: '📥' },
+        { id: 'issue',              label: 'Issue to Prod.',     link: `/dashboard/issue/${deptPath}`,       icon: '🏭' },
+        { id: 'outward',            label: 'Dispatch',           link: `/dashboard/outward/${deptPath}`,     icon: '🚛' },
+        { id: 'returns',            label: 'Client Returns',     link: '/dashboard/returns',                 icon: '↩️' },
+      ],
+    },
+    {
+      section: 'TOOLS',
+      items: [
+        { id: 'paint-calc',         label: 'Paint Calculator',   link: '/dashboard/paint-calc',              icon: '🧮' },
+        { id: 'purchase-requests',  label: 'Raise PR',           link: '/dashboard/purchase-requests',       icon: '📋' },
+        { id: 'challan',            label: 'Gen. Challan',       link: '/dashboard/challan',                 icon: '🧾' },
+        { id: 'stock-count',        label: 'Stock Count',        link: '/dashboard/stock-count',             icon: '🔢' },
+      ],
+    },
+  ];
+
+  const nav = user?.role === 'admin' ? adminNav : userNav;
+
+  const isActive = (item: NavItem) => {
+    if (item.link === '/dashboard') return currentPath === '/dashboard';
+    return currentPath === item.link || currentPath.startsWith(item.link + '/');
+  };
 
   return (
-    <div 
+    <div
       className={`h-[calc(100vh-48px)] bg-[var(--bg-top)] border-r border-border flex-shrink-0 flex flex-col transition-all duration-200 ease-in-out ${
-        isCollapsed ? 'w-[60px]' : 'w-[160px]'
+        isCollapsed ? 'w-[52px]' : 'w-[178px]'
       } ${
         isMobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
       } fixed lg:relative z-30 lg:z-10 ${!mounted ? 'transition-none' : ''}`}
     >
-      <div className="flex flex-col items-stretch gap-2 py-4 overflow-y-auto no-scrollbar flex-1 px-2 w-full">
-        {navItems.filter(i => (!i.roles || i.roles.includes(user?.role))).map((item, index) => {
-          const isActive = activePage === item.id;
-          const Icon = item.Icon;
-          return (
-            <Button
-              key={item.id}
-              pressed={isActive}
-              fullWidth
-              textAlign="left"
-              icon={<span className={item.color}><Icon size={16} strokeWidth={2.5} style={{ fill: 'none' }} /></span>}
-              onClick={() => {
-                if (item.link) {
-                  window.location.href = item.link;
-                } else {
-                  setActivePage(item.id);
-                }
-              }}
-            >
-              {isCollapsed ? '' : item.label}
-            </Button>
-          );
-        })}
+      {/* Nav Items */}
+      <div className="flex flex-col py-2 overflow-y-auto no-scrollbar flex-1 px-2">
+        {nav.map((group) => (
+          <div key={group.section} className="mb-0.5">
+            {/* Section Label */}
+            {!isCollapsed && (
+              <div className="px-2 pt-3 pb-0.5 text-[9px] font-bold tracking-widest uppercase select-none text-muted-foreground/50">
+                {group.section}
+              </div>
+            )}
+            {isCollapsed && <div className="my-1.5 border-t border-border/30" />}
+
+            {/* Nav Buttons */}
+            {group.items.map((item) => {
+              const active = isActive(item);
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => { window.location.href = item.link; }}
+                  title={isCollapsed ? item.label : undefined}
+                  className={`w-full flex items-center gap-2 px-2 py-[7px] rounded-lg text-left transition-colors duration-150 ${
+                    active
+                      ? 'bg-primary/10 text-primary'
+                      : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                  }`}
+                >
+                  <span className="flex-shrink-0 text-[13px] leading-none w-4 text-center">{item.icon}</span>
+                  {!isCollapsed && (
+                    <span className={`text-[11.5px] leading-tight truncate flex-1 ${active ? 'font-semibold' : ''}`}>
+                      {item.label}
+                    </span>
+                  )}
+                  {active && !isCollapsed && (
+                    <span className="w-1 h-1 rounded-full bg-primary flex-shrink-0 ml-auto" />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        ))}
       </div>
 
-      {/* Spacer pushes toggle to bottom */}
-      <div className="flex-1" />
-
-      {/* Bottom toggle button */}
-      <div className="flex items-center justify-center p-3 border-t border-border/50">
-        <button 
-          className="flex items-center justify-center w-7 h-7 border border-border rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-all cursor-pointer bg-transparent" 
-          onClick={toggleCollapse} 
+      {/* Collapse Toggle */}
+      <div className="flex items-center justify-center p-3 border-t border-border/50 flex-shrink-0">
+        <button
+          className="flex items-center justify-center w-7 h-7 border border-border rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-all bg-transparent"
+          onClick={toggleCollapse}
           title={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
         >
-          <svg 
-            width="12" 
-            height="12" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="2.5" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-            className={`transition-transform duration-200 ${isCollapsed ? 'rotate-180' : ''}`}
-          >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+            className={`transition-transform duration-200 ${isCollapsed ? 'rotate-180' : ''}`}>
             <polyline points="15 18 9 12 15 6" />
           </svg>
         </button>
