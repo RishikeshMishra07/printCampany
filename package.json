@@ -5,7 +5,7 @@
   "scripts": {
     "next-dev": "next dev",
     "worker": "tsx worker.ts",
-    "dev": "concurrently \"npm run next-dev\" \"npm run worker\"",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

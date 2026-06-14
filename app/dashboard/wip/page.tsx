@@ -78,9 +78,11 @@ export default function WIPPage() {
             <h1 className="text-xl font-bold text-foreground">🎨 WIP Tracking — Parts in Production</h1>
             <p className="text-xs text-muted-foreground mt-0.5">Track each batch of parts from Received → Painting → QC → Dispatched</p>
           </div>
-          <button onClick={() => setShowCreate(true)} className="px-4 py-2 text-sm font-semibold rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">
-            + New Batch
-          </button>
+          {user?.role !== 'user' && (
+            <button onClick={() => setShowCreate(true)} className="px-4 py-2 text-sm font-semibold rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">
+              + New Batch
+            </button>
+          )}
         </div>
       </div>
 
@@ -134,7 +136,7 @@ export default function WIPPage() {
                       {b.qty_dispatched > 0 && <div><span className="text-muted-foreground">Dispatched:</span> <span className="font-bold text-blue-500">{b.qty_dispatched}</span></div>}
                       {b.qty_rejected > 0 && <div><span className="text-muted-foreground">Rejected:</span> <span className="font-bold text-red-500">{b.qty_rejected}</span></div>}
                     </div>
-                    {stage !== 'Dispatched' && (
+                    {stage !== 'Dispatched' && user?.role !== 'user' && (
                       <button onClick={() => advance(b)} disabled={advancing === b.id}
                         className="mt-3 w-full h-8 text-[11px] font-bold rounded-lg transition-all hover:opacity-90 disabled:opacity-50"
                         style={{ background: STAGE_CONFIG[STAGES[STAGES.indexOf(stage) + 1]]?.color || '#10b981', color: '#fff' }}>

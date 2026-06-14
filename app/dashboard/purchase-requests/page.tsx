@@ -76,9 +76,11 @@ export default function PurchaseRequestsPage() {
             <h1 className="text-xl font-bold text-foreground">📋 Purchase Requests</h1>
             <p className="text-xs text-muted-foreground mt-0.5">Raise and manage material purchase requests — Admin can approve or reject</p>
           </div>
-          <button onClick={() => setShowModal(true)} className="px-4 py-2 text-sm font-semibold rounded-lg text-white transition-colors" style={{ background: '#f97316' }}>
-            + Raise PR
-          </button>
+          {user?.role !== 'user' && (
+            <button onClick={() => setShowModal(true)} className="px-4 py-2 text-sm font-semibold rounded-lg text-white transition-colors" style={{ background: '#f97316' }}>
+              + Raise PR
+            </button>
+          )}
         </div>
       </div>
 

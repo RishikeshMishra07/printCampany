@@ -9,12 +9,17 @@ export default function TransactionPage({ txType }: { txType: 'Inward' | 'Outwar
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [formData, setFormData] = useState({ item_id: '', quantity: '', reference_no: '', remarks: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [user, setUser] = useState<any>(null);
 
   const loadData = async () => {
     try {
       const itemsRes = await fetch('/api/store/live-stock');
       const itemsData = await itemsRes.json();
       if (itemsData.stock) setItems(itemsData.stock);
+
+      const userRes = await fetch('/api/auth/me');
+      const userData = await userRes.json();
+      if (userData.success) setUser(userData.user);
 
       const txRes = await fetch('/api/store/transactions');
       const txData = await txRes.json();
@@ -79,47 +84,49 @@ export default function TransactionPage({ txType }: { txType: 'Inward' | 'Outwar
 
       <div className="flex-grow overflow-y-auto p-6 flex flex-col lg:flex-row gap-6">
         {/* Add Form */}
-        <div className="lg:w-[350px] flex-shrink-0 flex flex-col gap-4">
-          <form onSubmit={handleSubmit} className="bg-card border border-border rounded-2xl p-5 shadow-sm flex flex-col gap-4">
-            <div className="text-sm font-bold border-b border-border pb-2 text-foreground">New {txType} Entry</div>
-            
-            <div>
-              <label className="text-xs font-semibold text-muted-foreground mb-1.5 block">Select Item *</label>
-              <select required className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm"
-                value={formData.item_id} onChange={e => setFormData({ ...formData, item_id: e.target.value })}>
-                <option value="">— Select Item —</option>
-                {items.map(item => (
-                  <option key={item.id} value={item.id}>{item.name} ({item.current_qty} {item.unit_of_measure} in stock)</option>
-                ))}
-              </select>
-            </div>
+        {user?.role !== 'user' && (
+          <div className="lg:w-[350px] flex-shrink-0 flex flex-col gap-4">
+            <form onSubmit={handleSubmit} className="bg-card border border-border rounded-2xl p-5 shadow-sm flex flex-col gap-4">
+              <div className="text-sm font-bold border-b border-border pb-2 text-foreground">New {txType} Entry</div>
+              
+              <div>
+                <label className="text-xs font-semibold text-muted-foreground mb-1.5 block">Select Item *</label>
+                <select required className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm"
+                  value={formData.item_id} onChange={e => setFormData({ ...formData, item_id: e.target.value })}>
+                  <option value="">— Select Item —</option>
+                  {items.map(item => (
+                    <option key={item.id} value={item.id}>{item.name} ({item.current_qty} {item.unit_of_measure} in stock)</option>
+                  ))}
+                </select>
+              </div>
 
-            <div>
-              <label className="text-xs font-semibold text-muted-foreground mb-1.5 block">Quantity *</label>
-              <input required type="number" step="0.01" min="0.01" className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm"
-                placeholder="0.00"
-                value={formData.quantity} onChange={e => setFormData({ ...formData, quantity: e.target.value })} />
-            </div>
+              <div>
+                <label className="text-xs font-semibold text-muted-foreground mb-1.5 block">Quantity *</label>
+                <input required type="number" step="0.01" min="0.01" className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm"
+                  placeholder="0.00"
+                  value={formData.quantity} onChange={e => setFormData({ ...formData, quantity: e.target.value })} />
+              </div>
 
-            <div>
-              <label className="text-xs font-semibold text-muted-foreground mb-1.5 block">Reference / Challan No.</label>
-              <input type="text" className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm"
-                placeholder="e.g. CH-12345"
-                value={formData.reference_no} onChange={e => setFormData({ ...formData, reference_no: e.target.value })} />
-            </div>
+              <div>
+                <label className="text-xs font-semibold text-muted-foreground mb-1.5 block">Reference / Challan No.</label>
+                <input type="text" className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm"
+                  placeholder="e.g. CH-12345"
+                  value={formData.reference_no} onChange={e => setFormData({ ...formData, reference_no: e.target.value })} />
+              </div>
 
-            <div>
-              <label className="text-xs font-semibold text-muted-foreground mb-1.5 block">Remarks</label>
-              <textarea className="w-full rounded-lg border border-input bg-background p-3 text-sm min-h-[80px]"
-                placeholder="Optional notes..."
-                value={formData.remarks} onChange={e => setFormData({ ...formData, remarks: e.target.value })} />
-            </div>
+              <div>
+                <label className="text-xs font-semibold text-muted-foreground mb-1.5 block">Remarks</label>
+                <textarea className="w-full rounded-lg border border-input bg-background p-3 text-sm min-h-[80px]"
+                  placeholder="Optional notes..."
+                  value={formData.remarks} onChange={e => setFormData({ ...formData, remarks: e.target.value })} />
+              </div>
 
-            <button disabled={isSubmitting} type="submit" className="h-10 rounded-xl text-sm font-bold text-white transition-all disabled:opacity-50" style={{ background: themeColor }}>
-              {isSubmitting ? 'Saving...' : `Record ${txType}`}
-            </button>
-          </form>
-        </div>
+              <button disabled={isSubmitting} type="submit" className="h-10 rounded-xl text-sm font-bold text-white transition-all disabled:opacity-50" style={{ background: themeColor }}>
+                {isSubmitting ? 'Saving...' : `Record ${txType}`}
+              </button>
+            </form>
+          </div>
+        )}
 
         {/* History Table */}
         <div className="flex-1 bg-card border border-border rounded-2xl shadow-sm overflow-hidden flex flex-col">

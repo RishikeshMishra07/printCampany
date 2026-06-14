@@ -75,7 +75,7 @@ export default function DealsPage() {
     return true;
   });
 
-  const openDeals = deals.filter(d => d.deal_type === 'Open' && d.status === 'Active');
+  const openDeals = deals.filter(d => d.deal_type === 'Open');
   const closedDeals = deals.filter(d => d.deal_type === 'Closed');
   const activeCount = deals.filter(d => d.status === 'Active').length;
 

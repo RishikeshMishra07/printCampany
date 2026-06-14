@@ -112,7 +112,7 @@ export default function LoginForm() {
             type="text"
             required
             suppressHydrationWarning
-            placeholder="Enter your Emp ID"
+            placeholder="ST-001"
             value={authData.employee_id}
             onChange={e => setAuthData({ ...authData, employee_id: e.target.value })}
             className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
@@ -132,7 +132,7 @@ export default function LoginForm() {
               type={showPwd ? "text" : "password"}
               required
               suppressHydrationWarning
-              placeholder="••••••••"
+              placeholder="Store@123"
               value={authData.password}
               onChange={e => setAuthData({ ...authData, password: e.target.value })}
               onKeyDown={(e) => { if (e.key === 'Enter') handleLogin(); }}

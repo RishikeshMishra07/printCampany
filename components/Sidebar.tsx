@@ -66,6 +66,16 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, setActivePage, user, isMo
       ],
     },
     {
+      section: 'OPERATIONS',
+      items: [
+        { id: 'inward',             label: 'Inward (GRN)',       link: '/dashboard/inward/general',      icon: '📥' },
+        { id: 'issue',              label: 'Issue to Prod.',     link: '/dashboard/issue/general',       icon: '🏭' },
+        { id: 'outward',            label: 'Dispatch',           link: '/dashboard/outward/general',     icon: '🚛' },
+        { id: 'returns',            label: 'Client Returns',     link: '/dashboard/returns',             icon: '↩️' },
+        { id: 'challan',            label: 'Gen. Challan',       link: '/dashboard/challan',             icon: '🧾' },
+      ],
+    },
+    {
       section: 'SYSTEM',
       items: [
         { id: 'admin',              label: 'User Management',    link: '/dashboard/admin',              icon: '👤' },

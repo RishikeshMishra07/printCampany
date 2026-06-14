@@ -78,74 +78,76 @@ export default function ChallanPage() {
 
       <div className="flex-grow overflow-y-auto p-6 flex flex-col lg:flex-row gap-6">
         {/* Form */}
-        <div className="lg:w-[520px] flex-shrink-0">
-          <div className="bg-card border border-border rounded-2xl p-6 shadow-sm flex flex-col gap-4">
-            <div className="text-sm font-bold border-b border-border pb-3">📝 New Challan Details</div>
+        {user?.role !== 'user' && (
+          <div className="lg:w-[520px] flex-shrink-0">
+            <div className="bg-card border border-border rounded-2xl p-6 shadow-sm flex flex-col gap-4">
+              <div className="text-sm font-bold border-b border-border pb-3">📝 New Challan Details</div>
 
-            <div>
-              <label className="text-xs font-semibold text-muted-foreground mb-1 block">Client Deal</label>
-              <select className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                value={form.deal_id} onChange={e => setForm({...form, deal_id: e.target.value})}>
-                <option value="">— General Dispatch (no deal) —</option>
-                {deals.map(d => <option key={d.id} value={d.id}>{d.client_name} — {d.item_name || 'General'}</option>)}
-              </select>
-            </div>
+              <div>
+                <label className="text-xs font-semibold text-muted-foreground mb-1 block">Client Deal</label>
+                <select className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  value={form.deal_id} onChange={e => setForm({...form, deal_id: e.target.value})}>
+                  <option value="">— General Dispatch (no deal) —</option>
+                  {deals.map(d => <option key={d.id} value={d.id}>{d.client_name} — {d.item_name || 'General'}</option>)}
+                </select>
+              </div>
 
-            <div className="grid grid-cols-3 gap-3">
-              <div>
-                <label className="text-xs font-semibold text-muted-foreground mb-1 block">Vehicle No.</label>
-                <input className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                  placeholder="MH-04-AB-1234" value={form.vehicle_no} onChange={e => setForm({...form, vehicle_no: e.target.value})} />
+              <div className="grid grid-cols-3 gap-3">
+                <div>
+                  <label className="text-xs font-semibold text-muted-foreground mb-1 block">Vehicle No.</label>
+                  <input className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                    placeholder="MH-04-AB-1234" value={form.vehicle_no} onChange={e => setForm({...form, vehicle_no: e.target.value})} />
+                </div>
+                <div>
+                  <label className="text-xs font-semibold text-muted-foreground mb-1 block">Driver Name</label>
+                  <input className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                    placeholder="Ramesh Kumar" value={form.driver_name} onChange={e => setForm({...form, driver_name: e.target.value})} />
+                </div>
+                <div>
+                  <label className="text-xs font-semibold text-muted-foreground mb-1 block">Driver Phone</label>
+                  <input className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                    placeholder="9876543210" value={form.driver_phone} onChange={e => setForm({...form, driver_phone: e.target.value})} />
+                </div>
               </div>
-              <div>
-                <label className="text-xs font-semibold text-muted-foreground mb-1 block">Driver Name</label>
-                <input className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                  placeholder="Ramesh Kumar" value={form.driver_name} onChange={e => setForm({...form, driver_name: e.target.value})} />
-              </div>
-              <div>
-                <label className="text-xs font-semibold text-muted-foreground mb-1 block">Driver Phone</label>
-                <input className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                  placeholder="9876543210" value={form.driver_phone} onChange={e => setForm({...form, driver_phone: e.target.value})} />
-              </div>
-            </div>
 
-            {/* Items */}
-            <div>
-              <div className="flex items-center justify-between mb-2">
-                <label className="text-xs font-semibold text-muted-foreground">Items Dispatched *</label>
-                <button onClick={addRow} className="text-xs px-2 py-1 rounded border border-border hover:bg-muted">+ Add Row</button>
-              </div>
-              <div className="flex flex-col gap-2">
-                {form.rows.map((row, i) => (
-                  <div key={i} className="flex gap-2 items-start">
-                    <div className="flex-1">
-                      <select className="w-full h-9 rounded-lg border border-input bg-background px-2 text-xs focus:outline-none focus:ring-2 focus:ring-ring"
-                        value={row.item_name} onChange={e => updateRow(i, 'item_name', e.target.value)}>
-                        <option value="">— Select Item —</option>
-                        {items.map(it => <option key={it.id} value={it.name}>{it.name}</option>)}
-                      </select>
+              {/* Items */}
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <label className="text-xs font-semibold text-muted-foreground">Items Dispatched *</label>
+                  <button onClick={addRow} className="text-xs px-2 py-1 rounded border border-border hover:bg-muted">+ Add Row</button>
+                </div>
+                <div className="flex flex-col gap-2">
+                  {form.rows.map((row, i) => (
+                    <div key={i} className="flex gap-2 items-start">
+                      <div className="flex-1">
+                        <select className="w-full h-9 rounded-lg border border-input bg-background px-2 text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                          value={row.item_name} onChange={e => updateRow(i, 'item_name', e.target.value)}>
+                          <option value="">— Select Item —</option>
+                          {items.map(it => <option key={it.id} value={it.name}>{it.name}</option>)}
+                        </select>
+                      </div>
+                      <input type="number" placeholder="Qty" className="w-20 h-9 rounded-lg border border-input bg-background px-2 text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                        value={row.qty} onChange={e => updateRow(i, 'qty', e.target.value)} />
+                      <input placeholder="Unit" className="w-16 h-9 rounded-lg border border-input bg-background px-2 text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                        value={row.unit} onChange={e => updateRow(i, 'unit', e.target.value)} />
+                      <input placeholder="Remarks" className="w-28 h-9 rounded-lg border border-input bg-background px-2 text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                        value={row.remarks} onChange={e => updateRow(i, 'remarks', e.target.value)} />
+                      {form.rows.length > 1 && (
+                        <button onClick={() => removeRow(i)} className="w-9 h-9 flex items-center justify-center rounded-lg border border-red-200 text-red-500 hover:bg-red-50 text-xs flex-shrink-0">✕</button>
+                      )}
                     </div>
-                    <input type="number" placeholder="Qty" className="w-20 h-9 rounded-lg border border-input bg-background px-2 text-xs focus:outline-none focus:ring-2 focus:ring-ring"
-                      value={row.qty} onChange={e => updateRow(i, 'qty', e.target.value)} />
-                    <input placeholder="Unit" className="w-16 h-9 rounded-lg border border-input bg-background px-2 text-xs focus:outline-none focus:ring-2 focus:ring-ring"
-                      value={row.unit} onChange={e => updateRow(i, 'unit', e.target.value)} />
-                    <input placeholder="Remarks" className="w-28 h-9 rounded-lg border border-input bg-background px-2 text-xs focus:outline-none focus:ring-2 focus:ring-ring"
-                      value={row.remarks} onChange={e => updateRow(i, 'remarks', e.target.value)} />
-                    {form.rows.length > 1 && (
-                      <button onClick={() => removeRow(i)} className="w-9 h-9 flex items-center justify-center rounded-lg border border-red-200 text-red-500 hover:bg-red-50 text-xs flex-shrink-0">✕</button>
-                    )}
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <button onClick={handleGenerate} disabled={saving || !form.rows.some(r => r.item_name && r.qty)}
-              className="h-11 rounded-xl text-sm font-bold text-white disabled:opacity-50 transition-all"
-              style={{ background: '#6366f1' }}>
-              {saving ? 'Generating...' : '🧾 Generate Challan'}
-            </button>
+              <button onClick={handleGenerate} disabled={saving || !form.rows.some(r => r.item_name && r.qty)}
+                className="h-11 rounded-xl text-sm font-bold text-white disabled:opacity-50 transition-all"
+                style={{ background: '#6366f1' }}>
+                {saving ? 'Generating...' : '🧾 Generate Challan'}
+              </button>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Right — print preview or history */}
         <div className="flex-1 flex flex-col gap-4">
