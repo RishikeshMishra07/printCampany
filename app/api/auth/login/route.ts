@@ -78,7 +78,10 @@ export async function POST(request: Request) {
     `;
     const params: any[] = [employee_id, password, role];
 
-    if (role === 'user' && department) {
+    if (role === 'user') {
+      if (!department) {
+        return NextResponse.json({ success: false, message: 'Department is required' }, { status: 400 });
+      }
       dbQuery += ` AND d.name = $4`;
       params.push(department);
     }

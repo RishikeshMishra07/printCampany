@@ -99,7 +99,7 @@ export default function StockCountPage() {
         </div>
 
         {/* Count Table */}
-        <div className="rounded-xl border border-border bg-card shadow-sm overflow-hidden">
+        <div className="rounded-xl border border-border bg-card shadow-sm overflow-x-auto">
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12 }}>
             <thead>
               <tr style={{ borderBottom: '2px solid var(--color-border)', background: 'var(--color-muted)' }}>

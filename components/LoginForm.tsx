@@ -9,43 +9,83 @@ export default function LoginForm() {
   const [userType, setUserType] = useState("user");
   const [department, setDepartment] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [adminStep, setAdminStep] = useState(1);
+  const [adminDepartments, setAdminDepartments] = useState<any[]>([]);
 
   const handleLogin = async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     setIsLoading(true);
     try {
-      const res = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          employee_id: authData.employee_id,
-          password: authData.password,
-          role: userType,
-          department: department
-        })
-      });
-
-      const data = await res.json();
-
-      if (res.ok && data.success) {
-        alert(`Welcome, ${data.user.name || data.user.employee_id}!`);
-        if (data.user.role === 'user') {
-          const dept = data.user.department_name || department;
-          if (dept === 'Printing') {
-            router.push('/dashboard/live-records/printing');
-          } else if (dept === 'Quality Control (QC)') {
-            router.push('/dashboard/live-records/qc');
-          } else if (dept === 'Dispatch') {
-            router.push('/dashboard/live-records/dispatch');
-          } else {
-            // Store department → goes to Live Stock
-            router.push('/dashboard/live-stock/general');
-          }
+      if (userType === 'admin' && adminStep === 1) {
+        // Step 1: Verify admin credentials
+        const res = await fetch('/api/auth/verify-admin', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            employee_id: authData.employee_id,
+            password: authData.password
+          })
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          setAdminDepartments(data.departments);
+          setAdminStep(2);
         } else {
-          router.push('/dashboard');
+          alert(`Login failed: ${data.message}`);
         }
       } else {
-        alert(`Login failed: ${data.message}`);
+        // Standard login (User, or Admin Step 2)
+        if (userType === 'admin' && adminStep === 2 && !department) {
+           alert('Please select a department to proceed.');
+           setIsLoading(false);
+           return;
+        }
+
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            employee_id: authData.employee_id,
+            password: authData.password,
+            role: userType,
+            department: department
+          })
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          alert(`Welcome, ${data.user.name || data.user.employee_id}!`);
+          const dept = data.user.department_name || department;
+          
+          if (data.user.role === 'user') {
+            if (dept === 'Printing') {
+              router.push('/dashboard/live-records/printing');
+            } else if (dept === 'Quality Control (QC)') {
+              router.push('/dashboard/live-records/qc');
+            } else if (dept === 'Dispatch') {
+              router.push('/dashboard/live-records/dispatch');
+            } else {
+              // Store department → goes to Live Stock
+              router.push('/dashboard/live-stock/general');
+            }
+          } else {
+            // Admin Role
+            if (dept === 'Store') {
+              router.push('/dashboard'); // Store Admin Dashboard
+            } else if (dept === 'Printing') {
+              router.push('/dashboard/live-records/printing');
+            } else if (dept === 'Quality Control (QC)') {
+              router.push('/dashboard/live-records/qc');
+            } else if (dept === 'Dispatch') {
+              router.push('/dashboard/live-records/dispatch');
+            } else {
+              router.push('/dashboard'); // Fallback for Management etc
+            }
+          }
+        } else {
+          alert(`Login failed: ${data.message}`);
+        }
       }
     } catch (error) {
       alert('Error connecting to the server.');
@@ -72,7 +112,7 @@ export default function LoginForm() {
             <button
               type="button"
               suppressHydrationWarning
-              onClick={() => setUserType('user')}
+              onClick={() => { setUserType('user'); setAdminStep(1); }}
               className={`inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-all ${userType === 'user' ? 'bg-background text-foreground shadow-sm' : 'hover:text-foreground'
                 } w-1/2`}
             >
@@ -81,7 +121,7 @@ export default function LoginForm() {
             <button
               type="button"
               suppressHydrationWarning
-              onClick={() => setUserType('admin')}
+              onClick={() => { setUserType('admin'); setAdminStep(1); }}
               className={`inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-all ${userType === 'admin' ? 'bg-background text-foreground shadow-sm' : 'hover:text-foreground'
                 } w-1/2`}
             >
@@ -90,22 +130,39 @@ export default function LoginForm() {
           </div>
         </div>
 
-        {/* Department Dropdown (For Both User and Admin) */}
-        <div className="grid gap-2">
-          <label className="text-sm font-medium leading-none text-foreground">Department</label>
-          <select
-            required
-            suppressHydrationWarning
-            value={department}
-            onChange={(e) => setDepartment(e.target.value)}
-            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-          >
-            <option value="">Select Department</option>
-            <option value="Store">Store</option>
-          </select>
-        </div>
+        {/* Department Dropdown */}
+        {((userType === 'user') || (userType === 'admin' && adminStep === 2)) && (
+          <div className="grid gap-2">
+            <label className="text-sm font-medium leading-none text-foreground">
+              {userType === 'admin' ? 'Select Your Department to Proceed' : 'Department'}
+            </label>
+            <select
+              required
+              suppressHydrationWarning
+              value={department}
+              onChange={(e) => setDepartment(e.target.value)}
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            >
+              <option value="">Select Department</option>
+              {userType === 'admin' && adminStep === 2 ? (
+                adminDepartments.map((d: any) => (
+                  <option key={d.id} value={d.name}>{d.name}</option>
+                ))
+              ) : (
+                <>
+                  <option value="Printing">Printing</option>
+                  <option value="Quality Control (QC)">Quality Control (QC)</option>
+                  <option value="Dispatch">Dispatch</option>
+                  <option value="Management">Management</option>
+                  <option value="Store">Store</option>
+                </>
+              )}
+            </select>
+          </div>
+        )}
 
         {/* Emp ID Input */}
+        {!(userType === 'admin' && adminStep === 2) && (
         <div className="grid gap-2">
           <label className="text-sm font-medium leading-none text-foreground">Emp ID</label>
           <input
@@ -117,9 +174,11 @@ export default function LoginForm() {
             onChange={e => setAuthData({ ...authData, employee_id: e.target.value })}
             className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           />
-        </div>
+          </div>
+        )}
 
         {/* Password Input */}
+        {!(userType === 'admin' && adminStep === 2) && (
         <div className="grid gap-2">
           <div className="flex items-center justify-between w-full">
             <label className="text-sm font-medium leading-none text-foreground">Password</label>
@@ -147,7 +206,8 @@ export default function LoginForm() {
               {showPwd ? 'Hide' : 'Show'}
             </button>
           </div>
-        </div>
+          </div>
+        )}
 
         {/* Submit Button */}
         <button
@@ -161,7 +221,7 @@ export default function LoginForm() {
               <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
               Signing in...
             </span>
-          ) : 'Sign In'}
+          ) : (userType === 'admin' && adminStep === 1 ? 'Verify Credentials' : 'Sign In')}
         </button>
 
       </form>

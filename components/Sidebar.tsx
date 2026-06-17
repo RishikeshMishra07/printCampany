@@ -60,6 +60,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, setActivePage, user, isMo
     {
       section: 'STOCK',
       items: [
+        { id: 'live-stock',         label: 'Live Stock',         link: '/dashboard/live-stock/general', icon: '📦' },
         { id: 'purchase-requests',  label: 'Purchase Requests',  link: '/dashboard/purchase-requests',  icon: '📋' },
         { id: 'stock-count',        label: 'Physical Count',     link: '/dashboard/stock-count',        icon: '🔢' },
         { id: 'audit',              label: 'Audit Logs',         link: '/dashboard/audit',              icon: '📜' },
@@ -68,6 +69,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, setActivePage, user, isMo
     {
       section: 'OPERATIONS',
       items: [
+        { id: 'pending-approvals',  label: 'Pending Inwards',    link: '/dashboard/pending-approvals',   icon: '⏳' },
         { id: 'inward',             label: 'Inward (GRN)',       link: '/dashboard/inward/general',      icon: '📥' },
         { id: 'issue',              label: 'Issue to Prod.',     link: '/dashboard/issue/general',       icon: '🏭' },
         { id: 'outward',            label: 'Dispatch',           link: '/dashboard/outward/general',     icon: '🚛' },
@@ -113,7 +115,25 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, setActivePage, user, isMo
     },
   ];
 
-  const nav = user?.role === 'admin' ? adminNav : userNav;
+  const userDept = user?.department || 'Management';
+
+  let nav: NavGroup[] = [];
+
+  if (userDept === 'Store') {
+    nav = user?.role === 'admin' ? adminNav : userNav;
+  } else {
+    let link = `/dashboard/live-records/${deptPath || 'general'}`;
+    // If we have a specific path we can use it, but definitely not /dashboard since that is Store
+    
+    nav = [
+      {
+        section: `${userDept.toUpperCase()}`,
+        items: [
+          { id: 'dashboard', label: 'Dashboard', link: link, icon: '🏠' }
+        ]
+      }
+    ];
+  }
 
   const isActive = (item: NavItem) => {
     if (item.link === '/dashboard') return currentPath === '/dashboard';

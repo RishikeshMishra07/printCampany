@@ -12,10 +12,10 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
-    const { name, category, unit_of_measure, min_stock_level } = await req.json();
+    const { name, category, unit_of_measure, min_stock_level, project, new_rate, old_rate } = await req.json();
     const { rows } = await pool.query(
-      'INSERT INTO items (name, category, unit_of_measure, min_stock_level) VALUES ($1, $2, $3, $4) RETURNING *',
-      [name, category, unit_of_measure, min_stock_level]
+      'INSERT INTO items (name, category, unit_of_measure, min_stock_level, project, new_rate, old_rate) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',
+      [name, category, unit_of_measure, min_stock_level, project, new_rate, old_rate]
     );
     return NextResponse.json({ item: rows[0] });
   } catch (error: any) {

@@ -12,7 +12,6 @@ export default function AuditLogsPage() {
   const [transactions, setTransactions] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [filterType, setFilterType] = useState('All');
-  const [filterClient, setFilterClient] = useState('All');
   const [search, setSearch] = useState('');
   const [dateFrom, setDateFrom] = useState('');
   const [dateTo, setDateTo] = useState('');
@@ -29,11 +28,8 @@ export default function AuditLogsPage() {
     finally { setLoading(false); }
   };
 
-  const clients = ['All', ...Array.from(new Set(transactions.map(t => t.client_name).filter(Boolean))) as string[]];
-
   const filtered = transactions.filter(t => {
     if (filterType !== 'All' && t.transaction_type !== filterType) return false;
-    if (filterClient !== 'All' && t.client_name !== filterClient) return false;
     if (search && !t.item_name?.toLowerCase().includes(search.toLowerCase()) && !t.recorded_by?.toLowerCase().includes(search.toLowerCase()) && !t.notes?.toLowerCase().includes(search.toLowerCase())) return false;
     if (dateFrom && new Date(t.created_at) < new Date(dateFrom)) return false;
     if (dateTo && new Date(t.created_at) > new Date(dateTo + 'T23:59:59')) return false;
@@ -102,14 +98,7 @@ export default function AuditLogsPage() {
                 );
               })}
             </div>
-            {/* Client filter */}
-            <select
-              className="h-9 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-              value={filterClient}
-              onChange={e => setFilterClient(e.target.value)}
-            >
-              {clients.map(c => <option key={c} value={c}>{c === 'All' ? '— All Clients —' : c}</option>)}
-            </select>
+
             {/* Date range */}
             <input type="date" value={dateFrom} onChange={e => setDateFrom(e.target.value)}
               className="h-9 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
@@ -117,8 +106,8 @@ export default function AuditLogsPage() {
             <input type="date" value={dateTo} onChange={e => setDateTo(e.target.value)}
               className="h-9 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             {/* Clear */}
-            {(filterType !== 'All' || filterClient !== 'All' || search || dateFrom || dateTo) && (
-              <button onClick={() => { setFilterType('All'); setFilterClient('All'); setSearch(''); setDateFrom(''); setDateTo(''); }}
+            {(filterType !== 'All' || search || dateFrom || dateTo) && (
+              <button onClick={() => { setFilterType('All'); setSearch(''); setDateFrom(''); setDateTo(''); }}
                 className="px-3 py-1.5 text-xs rounded-lg transition-colors" style={{ color: '#ef4444', border: '1px solid #ef4444', background: 'transparent' }}>
                 ✕ Clear Filters
               </button>
@@ -136,14 +125,14 @@ export default function AuditLogsPage() {
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 11 }}>
                 <thead>
                   <tr style={{ borderBottom: '2px solid var(--color-border)', background: 'var(--color-muted)' }}>
-                    {['#', 'Date & Time', 'Type', 'Item', 'Category', 'Qty', 'Unit', 'Deal / Client', 'Recorded By', 'Notes'].map(h => (
+                    {['#', 'Date & Time', 'Type', 'Item', 'Category', 'Qty', 'Unit', 'Recorded By', 'Notes'].map(h => (
                       <th key={h} style={{ padding: '10px 12px', textAlign: 'left', fontSize: 10, fontWeight: 700, color: 'var(--color-muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.5px', whiteSpace: 'nowrap' }}>{h}</th>
                     ))}
                   </tr>
                 </thead>
                 <tbody>
                   {filtered.length === 0 ? (
-                    <tr><td colSpan={10} style={{ padding: 40, textAlign: 'center', color: 'var(--color-muted-foreground)', fontSize: 12 }}>
+                    <tr><td colSpan={9} style={{ padding: 40, textAlign: 'center', color: 'var(--color-muted-foreground)', fontSize: 12 }}>
                       No transactions match the selected filters.
                     </td></tr>
                   ) : filtered.map((tx, i) => {
@@ -163,7 +152,6 @@ export default function AuditLogsPage() {
                         <td style={{ padding: '10px 12px', color: 'var(--color-muted-foreground)' }}>{tx.category || '—'}</td>
                         <td style={{ padding: '10px 12px', fontWeight: 700, color: cfg.color }}>{parseFloat(tx.quantity).toFixed(2)}</td>
                         <td style={{ padding: '10px 12px', color: 'var(--color-muted-foreground)' }}>{tx.unit_of_measure || '—'}</td>
-                        <td style={{ padding: '10px 12px', color: 'var(--color-muted-foreground)' }}>{tx.client_name || '—'}</td>
                         <td style={{ padding: '10px 12px', color: 'var(--color-muted-foreground)' }}>{tx.recorded_by || '—'}</td>
                         <td style={{ padding: '10px 12px', color: 'var(--color-muted-foreground)', maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{tx.notes || '—'}</td>
                       </tr>
