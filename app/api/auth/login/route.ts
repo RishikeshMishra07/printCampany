@@ -43,7 +43,7 @@ export async function POST(request: Request) {
 
       -- Seed Departments
       INSERT INTO departments (name) VALUES 
-        ('Printing'), 
+        ('Production'), 
         ('Quality Control (QC)'), 
         ('Dispatch'), 
         ('Management'),
@@ -54,7 +54,7 @@ export async function POST(request: Request) {
       INSERT INTO users (employee_id, name, username, password, role, department_id) 
       VALUES 
         ('ims7191', 'Ankit (Manager)', 'admin_user', 'Admin@123', 'admin', (SELECT id FROM departments WHERE name='Management')), 
-        ('AP-101', 'Ankit (Operator)', 'operator_01', 'pass123', 'user', (SELECT id FROM departments WHERE name='Printing')),
+        ('AP-101', 'Ankit (Operator)', 'operator_01', 'pass123', 'user', (SELECT id FROM departments WHERE name='Production')),
         ('AP-102', 'Raju (QC Inspector)', 'qc_01', 'pass123', 'user', (SELECT id FROM departments WHERE name='Quality Control (QC)')),
         ('ST-001', 'Mohan (Store)', 'store_01', 'Store@123', 'user', (SELECT id FROM departments WHERE name='Store'))
       ON CONFLICT (username) DO UPDATE 
@@ -62,38 +62,30 @@ export async function POST(request: Request) {
 
       -- Seed Machines
       INSERT INTO machines (name, department_id) VALUES 
-        ('MakerBot-01', (SELECT id FROM departments WHERE name='Printing')),
-        ('Formlabs-02', (SELECT id FROM departments WHERE name='Printing'))
+        ('MakerBot-01', (SELECT id FROM departments WHERE name='Production')),
+        ('Formlabs-02', (SELECT id FROM departments WHERE name='Production'))
       ON CONFLICT (name) DO NOTHING;
     `);
 
-    const { employee_id, password, role, department } = await request.json();
+    const { employee_id, password, role } = await request.json();
 
-    // Query the database for a matching user strictly based on provided role and department
-    let dbQuery = `
+    // Authenticate by employee_id + password + role (no department needed)
+    const dbQuery = `
       SELECT u.id, u.employee_id, u.name, u.username, u.role, d.name as department_name
       FROM users u
       LEFT JOIN departments d ON u.department_id = d.id
       WHERE u.employee_id = $1 AND u.password = $2 AND u.role = $3
     `;
-    const params: any[] = [employee_id, password, role];
-
-    if (role === 'user') {
-      if (!department) {
-        return NextResponse.json({ success: false, message: 'Department is required' }, { status: 400 });
-      }
-      dbQuery += ` AND d.name = $4`;
-      params.push(department);
-    }
+    const params: any[] = [employee_id, password, role || 'user'];
 
     const result = await query(dbQuery, params);
 
     if (result.rows.length > 0) {
       const user = result.rows[0];
-      const sessionDept = (role === 'admin' && department) ? department : (user.department_name || null);
+      const sessionDept = user.department_name || null;
 
       const response = NextResponse.json({ success: true, message: 'Login successful', user });
-      
+
       // Create a secure HttpOnly session cookie
       response.cookies.set('auth_session', JSON.stringify({ id: user.id, employee_id: user.employee_id, name: user.name, username: user.username, role: user.role, department: sessionDept }), {
         httpOnly: true,

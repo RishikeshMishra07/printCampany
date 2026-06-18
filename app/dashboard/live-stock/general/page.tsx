@@ -7,7 +7,7 @@ export default function LiveStockPage() {
   const [lastUpdated, setLastUpdated] = useState('');
   const [filterCat, setFilterCat] = useState('All');
   const [search, setSearch] = useState('');
-  const [filterMonth, setFilterMonth] = useState('');
+  const [filterDate, setFilterDate] = useState(new Date().toISOString().split('T')[0]); // Default to today
   const [user, setUser] = useState<any>(null);
   const [showModal, setShowModal] = useState(false);
   const [editingItem, setEditingItem] = useState<any>(null);
@@ -19,14 +19,14 @@ export default function LiveStockPage() {
 
   const fetchStock = useCallback(async () => {
     try {
-      const url = filterMonth ? `/api/store/live-stock?month=${filterMonth}` : '/api/store/live-stock';
+      const url = filterDate ? `/api/store/live-stock?date=${filterDate}` : '/api/store/live-stock';
       const res = await fetch(url);
       const data = await res.json();
       if (data.stock) setStock(data.stock);
       setLastUpdated(new Date().toLocaleTimeString('en-IN', { hour12: true }));
     } catch (e) { console.error(e); }
     finally { setLoading(false); }
-  }, [filterMonth]);
+  }, [filterDate]);
 
   useEffect(() => {
     fetchStock();
@@ -166,10 +166,10 @@ export default function LiveStockPage() {
         {/* Filters */}
         <div className="flex gap-3 flex-wrap items-center bg-muted/20 p-2 rounded-xl border border-border">
           <input
-            type="month"
-            value={filterMonth}
-            onChange={e => setFilterMonth(e.target.value)}
-            className="h-9 px-3 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary w-40"
+            type="date"
+            value={filterDate}
+            onChange={e => setFilterDate(e.target.value)}
+            className="h-9 px-3 rounded-lg border border-input bg-background text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-primary w-40"
           />
           <div className="w-px h-6 bg-border mx-1" />
           <input

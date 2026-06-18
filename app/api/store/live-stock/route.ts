@@ -4,12 +4,19 @@ import pool from '@/lib/db';
 export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
-    const month = searchParams.get('month'); // format: 'YYYY-MM'
+    const dateQuery = searchParams.get('date'); // format: 'YYYY-MM-DD'
+    const month = searchParams.get('month'); // fallback for older clients
 
     let startDate = '1970-01-01';
     let endDate = '2100-01-01';
 
-    if (month) {
+    if (dateQuery) {
+      startDate = dateQuery;
+      // calculate next day for endDate (exclusive < endDate)
+      const date = new Date(startDate);
+      date.setDate(date.getDate() + 1);
+      endDate = date.toISOString().split('T')[0];
+    } else if (month) {
       startDate = `${month}-01`;
       // calculate first day of next month for endDate (exclusive < endDate)
       const date = new Date(startDate);

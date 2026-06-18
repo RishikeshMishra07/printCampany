@@ -62,31 +62,48 @@ export default function AdminPage() {
     if (!form.employee_id || !form.username || (!editUser && !form.password)) return;
     setSaving(true);
     try {
-      const payload: any = { ...form, department_id: parseInt(form.department_id) };
+      const parsedDeptId = form.department_id ? parseInt(form.department_id) : null;
+      const payload: any = { ...form, department_id: parsedDeptId };
       if (editUser && !form.password) delete payload.password;
+      
+      let res;
       if (editUser) {
-        await fetch(`/api/admin/users/${editUser.id}`, {
+        res = await fetch(`/api/admin/users/${editUser.id}`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
         });
       } else {
-        await fetch('/api/admin/users', {
+        res = await fetch('/api/admin/users', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
         });
       }
+      
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Operation failed');
+      
       setShowModal(false);
       fetchAll();
-    } catch (e) { console.error(e); }
-    finally { setSaving(false); }
+    } catch (e: any) { 
+      console.error(e); 
+      alert(e.message);
+    } finally { 
+      setSaving(false); 
+    }
   };
 
   const handleDelete = async (id: number) => {
     if (!confirm('Are you sure you want to delete this user?')) return;
-    await fetch(`/api/admin/users/${id}`, { method: 'DELETE' });
-    fetchAll();
+    try {
+      const res = await fetch(`/api/admin/users/${id}`, { method: 'DELETE' });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to delete');
+      fetchAll();
+    } catch (e: any) {
+      alert(e.message);
+    }
   };
 
   const filtered = users.filter(u =>

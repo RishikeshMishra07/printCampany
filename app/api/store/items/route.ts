@@ -11,7 +11,7 @@ export async function GET() {
 }
 
 export async function POST(req: Request) {
-  try {
+  try {   
     const { name, category, unit_of_measure, min_stock_level, project, new_rate, old_rate } = await req.json();
     const { rows } = await pool.query(
       'INSERT INTO items (name, category, unit_of_measure, min_stock_level, project, new_rate, old_rate) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',

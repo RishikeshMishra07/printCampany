@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 type Item = { id: number; name: string; category: string; current_qty: string; unit_of_measure: string; min_stock_level: string };
-type Transaction = { id: number; item_id: number; item_name: string; transaction_type: string; quantity: string; reference_no: string; notes: string; created_at: string; recorded_by: string; status: string };
+type Transaction = { id: number; item_id: number; item_name: string; transaction_type: string; quantity: string; reference_no: string; notes: string; created_at: string; recorded_by: string; status: string; production_remaining: string | null; category?: string; client_name?: string; unit_of_measure?: string; };
 
 const STATUS_COLORS: Record<string, { color: string; bg: string }> = {
   Approved: { color: '#10b981', bg: '#10b98115' },
@@ -28,6 +28,9 @@ export default function TransactionPage({ txType }: { txType: 'Inward' | 'Outwar
   const [filterStatus, setFilterStatus] = useState('All');
   const [page, setPage] = useState(1);
   const [processing, setProcessing] = useState<number | null>(null);
+  const [todayOnly, setTodayOnly] = useState(false);
+  const [savingRemaining, setSavingRemaining] = useState<number | null>(null);
+  const [remainingEdits, setRemainingEdits] = useState<Record<number, string>>({});
   const PAGE_SIZE = 100;
 
   const theme = THEME[txType];
@@ -95,10 +98,26 @@ export default function TransactionPage({ txType }: { txType: 'Inward' | 'Outwar
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status, approved_by: user?.name || user?.employee_id || 'Admin' }),
       });
-      await loadData(); // reload to show updated status
+      await loadData();
     } finally {
       setProcessing(null);
     }
+  };
+
+  const handleSaveRemaining = async (id: number) => {
+    const val = remainingEdits[id];
+    if (val === undefined || val === '') return;
+    setSavingRemaining(id);
+    try {
+      await fetch(`/api/store/transactions/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ production_remaining: parseFloat(val) }),
+      });
+      await loadData();
+      setRemainingEdits(prev => { const n = { ...prev }; delete n[id]; return n; });
+    } catch { alert('Error saving remaining qty'); }
+    finally { setSavingRemaining(null); }
   };
 
   const selectedItem = items.find(i => i.id === parseInt(formData.item_id));
@@ -106,7 +125,8 @@ export default function TransactionPage({ txType }: { txType: 'Inward' | 'Outwar
   const filtered = transactions.filter(tx => {
     const matchSearch = !search || tx.item_name?.toLowerCase().includes(search.toLowerCase()) || tx.reference_no?.toLowerCase().includes(search.toLowerCase());
     const matchStatus = filterStatus === 'All' || tx.status === filterStatus || (!tx.status && filterStatus === 'Approved');
-    return matchSearch && matchStatus;
+    const matchToday = !todayOnly || new Date(tx.created_at).toDateString() === new Date().toDateString();
+    return matchSearch && matchStatus && matchToday;
   });
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
@@ -160,8 +180,23 @@ export default function TransactionPage({ txType }: { txType: 'Inward' | 'Outwar
         {/* Table Card */}
         <div className="rounded-xl border border-border bg-card shadow-sm flex flex-col overflow-hidden flex-1">
           {/* Table header */}
-          <div className="px-5 py-3 border-b border-border bg-muted/10 flex items-center justify-between flex-shrink-0 gap-4">
-            <h2 className="text-sm font-bold text-foreground uppercase tracking-wider whitespace-nowrap">Recent {txType} History</h2>
+          <div className="px-5 py-3 border-b border-border bg-muted/10 flex items-center justify-between flex-shrink-0 gap-4 flex-wrap">
+            <div className="flex items-center gap-3">
+              <h2 className="text-sm font-bold text-foreground uppercase tracking-wider whitespace-nowrap">Recent {txType} History</h2>
+              {/* Today Only Toggle — shown for Issue type */}
+              {txType === 'Issue' && (
+                <button
+                  onClick={() => { setTodayOnly(t => !t); setPage(1); }}
+                  className="flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-bold rounded-lg border transition-all"
+                  style={todayOnly
+                    ? { background: theme.color, color: '#fff', borderColor: theme.color, boxShadow: `0 1px 6px ${theme.color}60` }
+                    : { background: 'transparent', color: 'var(--color-muted-foreground)', borderColor: 'var(--color-border)' }
+                  }
+                >
+                  📋 Aaj ka Issue
+                </button>
+              )}
+            </div>
 
             {/* Right side: filter chips + search */}
             <div className="flex items-center gap-2 ml-auto flex-wrap justify-end">
@@ -216,13 +251,18 @@ export default function TransactionPage({ txType }: { txType: 'Inward' | 'Outwar
                   <th className="px-3 py-2.5 font-bold whitespace-nowrap">Date & Time</th>
                   <th className="px-3 py-2.5 font-bold">Item</th>
                   <th className="px-3 py-2.5 font-bold">Category</th>
-                  <th className="px-3 py-2.5 font-bold text-right">Qty</th>
+                  <th className="px-3 py-2.5 font-bold text-right">Issued Qty</th>
                   {txType === 'Outward' && <th className="px-3 py-2.5 font-bold">Client / Deal</th>}
                   <th className="px-3 py-2.5 font-bold">Ref / Challan No.</th>
                   <th className="px-3 py-2.5 font-bold">Remarks</th>
                   <th className="px-3 py-2.5 font-bold">By</th>
                   {txType === 'Inward' && <th className="px-3 py-2.5 font-bold">Status</th>}
                   {txType === 'Inward' && user?.role === 'admin' && <th className="px-3 py-2.5 font-bold">Action</th>}
+                  {txType === 'Issue' && (
+                    <th className="px-3 py-2.5 font-bold text-right whitespace-nowrap" style={{ color: '#a855f7' }}>
+                      🏭 Remaining (Production)
+                    </th>
+                  )}
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
@@ -282,6 +322,40 @@ export default function TransactionPage({ txType }: { txType: 'Inward' | 'Outwar
                             </div>
                           ) : (
                             <span className="text-[10px] text-muted-foreground">—</span>
+                          )}
+                        </td>
+                      )}
+                      {/* Production Remaining — editable by production staff for Issue transactions */}
+                      {txType === 'Issue' && (
+                        <td className="px-3 py-2 text-right">
+                          <div className="flex items-center justify-end gap-1">
+                            <input
+                              type="number"
+                              step="0.01"
+                              min="0"
+                              placeholder={tx.production_remaining != null ? String(tx.production_remaining) : 'Fill...'}
+                              value={remainingEdits[tx.id] !== undefined ? remainingEdits[tx.id] : (tx.production_remaining != null ? String(tx.production_remaining) : '')}
+                              onChange={e => setRemainingEdits(prev => ({ ...prev, [tx.id]: e.target.value }))}
+                              className="w-20 h-7 rounded border px-2 text-[11px] font-bold text-right focus:outline-none focus:ring-1"
+                              style={{
+                                borderColor: tx.production_remaining != null ? '#a855f740' : '#a855f780',
+                                background: tx.production_remaining != null ? '#a855f710' : 'var(--color-background)',
+                                color: '#a855f7',
+                              }}
+                            />
+                            {remainingEdits[tx.id] !== undefined && remainingEdits[tx.id] !== '' && (
+                              <button
+                                onClick={() => handleSaveRemaining(tx.id)}
+                                disabled={savingRemaining === tx.id}
+                                className="h-7 px-2 text-[10px] font-bold rounded transition-all"
+                                style={{ background: '#a855f7', color: '#fff', opacity: savingRemaining === tx.id ? 0.6 : 1 }}
+                              >
+                                {savingRemaining === tx.id ? '...' : '✓'}
+                              </button>
+                            )}
+                          </div>
+                          {tx.production_remaining != null && remainingEdits[tx.id] === undefined && (
+                            <div className="text-[9px] text-muted-foreground mt-0.5 text-right">Saved ✓</div>
                           )}
                         </td>
                       )}

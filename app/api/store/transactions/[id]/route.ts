@@ -4,8 +4,24 @@ import pool from '@/lib/db';
 export async function PATCH(req: Request, props: { params: Promise<{ id: string }> }) {
   try {
     const params = await props.params;
-    const { status, approved_by } = await req.json();
+    const body = await req.json();
+    const { status, approved_by, production_remaining } = body;
 
+    // Case 1: Production staff updating remaining quantity
+    if (production_remaining !== undefined) {
+      const { rows } = await pool.query(
+        `UPDATE inventory_transactions 
+         SET production_remaining = $1
+         WHERE id = $2 RETURNING *`,
+        [production_remaining, params.id]
+      );
+      if (rows.length === 0) {
+        return NextResponse.json({ error: 'Transaction not found' }, { status: 404 });
+      }
+      return NextResponse.json({ success: true, transaction: rows[0] });
+    }
+
+    // Case 2: Admin approving/rejecting
     if (!['Approved', 'Rejected'].includes(status)) {
       return NextResponse.json({ error: 'Invalid status' }, { status: 400 });
     }

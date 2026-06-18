@@ -6,86 +6,53 @@ export default function LoginForm() {
   const router = useRouter();
   const [authData, setAuthData] = useState({ employee_id: '', password: '' });
   const [showPwd, setShowPwd] = useState(false);
-  const [userType, setUserType] = useState("user");
-  const [department, setDepartment] = useState("");
+  const [userType, setUserType] = useState<'user' | 'admin'>('user');
+  const [department, setDepartment] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [adminStep, setAdminStep] = useState(1);
-  const [adminDepartments, setAdminDepartments] = useState<any[]>([]);
 
   const handleLogin = async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
+
+    if (userType === 'user' && !department) {
+      alert('Please select your department.');
+      return;
+    }
+
     setIsLoading(true);
     try {
-      if (userType === 'admin' && adminStep === 1) {
-        // Step 1: Verify admin credentials
-        const res = await fetch('/api/auth/verify-admin', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            employee_id: authData.employee_id,
-            password: authData.password
-          })
-        });
-        const data = await res.json();
-        if (res.ok && data.success) {
-          setAdminDepartments(data.departments);
-          setAdminStep(2);
-        } else {
-          alert(`Login failed: ${data.message}`);
-        }
-      } else {
-        // Standard login (User, or Admin Step 2)
-        if (userType === 'admin' && adminStep === 2 && !department) {
-           alert('Please select a department to proceed.');
-           setIsLoading(false);
-           return;
-        }
+      const res = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          employee_id: authData.employee_id,
+          password: authData.password,
+          role: userType,
+          department: userType === 'user' ? department : undefined,
+        }),
+      });
 
-        const res = await fetch('/api/auth/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            employee_id: authData.employee_id,
-            password: authData.password,
-            role: userType,
-            department: department
-          })
-        });
+      const data = await res.json();
 
-        const data = await res.json();
+      if (res.ok && data.success) {
+        const user = data.user;
+        const dept = user.department_name || department || '';
 
-        if (res.ok && data.success) {
-          alert(`Welcome, ${data.user.name || data.user.employee_id}!`);
-          const dept = data.user.department_name || department;
-          
-          if (data.user.role === 'user') {
-            if (dept === 'Printing') {
-              router.push('/dashboard/live-records/printing');
-            } else if (dept === 'Quality Control (QC)') {
-              router.push('/dashboard/live-records/qc');
-            } else if (dept === 'Dispatch') {
-              router.push('/dashboard/live-records/dispatch');
-            } else {
-              // Store department → goes to Live Stock
-              router.push('/dashboard/live-stock/general');
-            }
+        if (user.role === 'user') {
+          if (dept === 'Production' || dept === 'Printing' || dept === 'Quality Control (QC)' || dept === 'Dispatch') {
+            router.push('/dashboard/production-bom');
           } else {
-            // Admin Role
-            if (dept === 'Store') {
-              router.push('/dashboard'); // Store Admin Dashboard
-            } else if (dept === 'Printing') {
-              router.push('/dashboard/live-records/printing');
-            } else if (dept === 'Quality Control (QC)') {
-              router.push('/dashboard/live-records/qc');
-            } else if (dept === 'Dispatch') {
-              router.push('/dashboard/live-records/dispatch');
-            } else {
-              router.push('/dashboard'); // Fallback for Management etc
-            }
+            router.push('/dashboard/live-stock/general');
           }
         } else {
-          alert(`Login failed: ${data.message}`);
+          // Admin Role
+          if (dept === 'Production' || dept === 'Printing' || dept === 'Quality Control (QC)' || dept === 'Dispatch') {
+            router.push('/dashboard/production-bom');
+          } else {
+            router.push('/dashboard');
+          }
         }
+      } else {
+        alert(`Login failed: ${data.message}`);
       }
     } catch (error) {
       alert('Error connecting to the server.');
@@ -105,37 +72,37 @@ export default function LoginForm() {
 
       <form onSubmit={handleLogin} className="grid gap-5 sm:gap-6">
 
-        {/* Custom Shadcn-like Tabs for Role */}
+        {/* User / Admin Tabs */}
         <div className="grid gap-2">
           <label className="text-sm font-medium leading-none text-foreground">Account Type</label>
           <div className="inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground w-full">
             <button
               type="button"
               suppressHydrationWarning
-              onClick={() => { setUserType('user'); setAdminStep(1); }}
-              className={`inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-all ${userType === 'user' ? 'bg-background text-foreground shadow-sm' : 'hover:text-foreground'
-                } w-1/2`}
+              onClick={() => { setUserType('user'); setDepartment(''); }}
+              className={`inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-all w-1/2 ${
+                userType === 'user' ? 'bg-background text-foreground shadow-sm' : 'hover:text-foreground'
+              }`}
             >
-              User
+              👤 User
             </button>
             <button
               type="button"
               suppressHydrationWarning
-              onClick={() => { setUserType('admin'); setAdminStep(1); }}
-              className={`inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-all ${userType === 'admin' ? 'bg-background text-foreground shadow-sm' : 'hover:text-foreground'
-                } w-1/2`}
+              onClick={() => { setUserType('admin'); setDepartment(''); }}
+              className={`inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-all w-1/2 ${
+                userType === 'admin' ? 'bg-background text-foreground shadow-sm' : 'hover:text-foreground'
+              }`}
             >
-              Admin
+              🔑 Admin
             </button>
           </div>
         </div>
 
-        {/* Department Dropdown */}
-        {((userType === 'user') || (userType === 'admin' && adminStep === 2)) && (
+        {/* Department Dropdown — only for User */}
+        {userType === 'user' && (
           <div className="grid gap-2">
-            <label className="text-sm font-medium leading-none text-foreground">
-              {userType === 'admin' ? 'Select Your Department to Proceed' : 'Department'}
-            </label>
+            <label className="text-sm font-medium leading-none text-foreground">Department</label>
             <select
               required
               suppressHydrationWarning
@@ -143,42 +110,31 @@ export default function LoginForm() {
               onChange={(e) => setDepartment(e.target.value)}
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
-              <option value="">Select Department</option>
-              {userType === 'admin' && adminStep === 2 ? (
-                adminDepartments.map((d: any) => (
-                  <option key={d.id} value={d.name}>{d.name}</option>
-                ))
-              ) : (
-                <>
-                  <option value="Printing">Printing</option>
-                  <option value="Quality Control (QC)">Quality Control (QC)</option>
-                  <option value="Dispatch">Dispatch</option>
-                  <option value="Management">Management</option>
-                  <option value="Store">Store</option>
-                </>
-              )}
+              <option value="">— Select Department —</option>
+              <option value="Production">Production</option>
+              <option value="Quality Control (QC)">Quality Control (QC)</option>
+              <option value="Dispatch">Dispatch</option>
+              <option value="Store">Store</option>
+              <option value="Management">Management</option>
             </select>
           </div>
         )}
 
         {/* Emp ID Input */}
-        {!(userType === 'admin' && adminStep === 2) && (
         <div className="grid gap-2">
-          <label className="text-sm font-medium leading-none text-foreground">Emp ID</label>
+          <label className="text-sm font-medium leading-none text-foreground">Employee ID</label>
           <input
             type="text"
             required
             suppressHydrationWarning
-            placeholder="ST-001"
+            placeholder={userType === 'admin' ? 'e.g. ims7191' : 'e.g. ST-001'}
             value={authData.employee_id}
             onChange={e => setAuthData({ ...authData, employee_id: e.target.value })}
             className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           />
-          </div>
-        )}
+        </div>
 
         {/* Password Input */}
-        {!(userType === 'admin' && adminStep === 2) && (
         <div className="grid gap-2">
           <div className="flex items-center justify-between w-full">
             <label className="text-sm font-medium leading-none text-foreground">Password</label>
@@ -191,7 +147,7 @@ export default function LoginForm() {
               type={showPwd ? "text" : "password"}
               required
               suppressHydrationWarning
-              placeholder="Store@123"
+              placeholder="••••••••"
               value={authData.password}
               onChange={e => setAuthData({ ...authData, password: e.target.value })}
               onKeyDown={(e) => { if (e.key === 'Enter') handleLogin(); }}
@@ -206,8 +162,7 @@ export default function LoginForm() {
               {showPwd ? 'Hide' : 'Show'}
             </button>
           </div>
-          </div>
-        )}
+        </div>
 
         {/* Submit Button */}
         <button
@@ -218,10 +173,13 @@ export default function LoginForm() {
         >
           {isLoading ? (
             <span className="flex items-center gap-2">
-              <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+              <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
               Signing in...
             </span>
-          ) : (userType === 'admin' && adminStep === 1 ? 'Verify Credentials' : 'Sign In')}
+          ) : `Sign In as ${userType === 'admin' ? 'Admin' : 'User'}`}
         </button>
 
       </form>

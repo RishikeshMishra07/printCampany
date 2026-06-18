@@ -1,0 +1,3620 @@
+[
+  {
+    "source": "Sheet1",
+    "specification": "MOULED",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "MOULDED SIDE SKIRT RH-YCA",
+    "part_no": "HYCASIDERH",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULED",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "MOULDED SIDE SKIRT LH-YCA",
+    "part_no": "HYCASIDELH",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "PLASTIC RIVET-015269000YSD NB SIDE SKIRT",
+    "part_no": "BPA001118",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "S.T Screw Truss 5X10 (Yellow/Trivalent)",
+    "part_no": "BPB000803",
+    "unit": "",
+    "qty": 8
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "CLIP SIDE SILL SPLASH GUARD 09409M15L01",
+    "part_no": "BPA000020",
+    "unit": "",
+    "qty": 8
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "SIDE SKIRT PLASTIC BRACKET FR YCA KIT",
+    "part_no": "BPA003095",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "SIDE SKIRT PLASTIC BRACKET RR YCA KIT",
+    "part_no": "BPA003096",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "SIDE SKIRT PLASTIC BRACKET CTR YCA KIT",
+    "part_no": "BPA003097",
+    "unit": "",
+    "qty": 4
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "STICKY POLYTHENE 7\" X 10\"",
+    "part_no": "PMB000060",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-1 22PIM276",
+    "part_no": "BPA001422",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-2 22PIM277",
+    "part_no": "BPA001424",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-3 22PIM278",
+    "part_no": "BPA001426",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-4 22PIM279",
+    "part_no": "BPA001428",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-5 22PIM279",
+    "part_no": "BPA001429",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-6 22PIM278",
+    "part_no": "BPA001427",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-7 22PIM277",
+    "part_no": "BPA001425",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-8 22PIM276",
+    "part_no": "BPA001423",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "PROFILE PROTECTOR SIDE SKIRT RH-YCA KIT",
+    "part_no": "BPA001392",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "DSA TAPE EX 4011 (8MMX10MTR)-YBA",
+    "part_no": "BPA000952",
+    "unit": "ROLL",
+    "qty": 0.19142857142857145
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "ADHESION PROMOTER (PRIMER K-520)",
+    "part_no": "RMG000002",
+    "unit": "LIT",
+    "qty": 0.001
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "POLYTHENE BAG  71\"X9\" per pcs",
+    "part_no": "PMB000194",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "PACKING BOX(1785X190X75MM)-YCA SIDE SKT",
+    "part_no": "PMA100530",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "FINE LINER 6MM X 55MTR-YCA BODY KIT",
+    "part_no": "BPA001408",
+    "unit": "",
+    "qty": 0.05818181818181818
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "ROLLER MASKER 290 X 20MTR-YCA BODY KIT",
+    "part_no": "BPA001409",
+    "unit": "",
+    "qty": 0.12
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "ROLLER MASKER 100MMX20MTR",
+    "part_no": "BPA001754",
+    "unit": "",
+    "qty": 2.78
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA SIDE SKIRT",
+    "part_name": "MASKING TAPE 35MM X 45 MTR",
+    "part_no": "COB000244",
+    "unit": "",
+    "qty": 2.4
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "MOULDED FR UPPER PART - YCA",
+    "part_no": "BPA001573",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "MOULDED REAR BUMPER (FRONT LOWER)- YCA",
+    "part_no": "BPA003975",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "PROFILE PROTECTOR FR BPR PART 2-YCA KIT",
+    "part_no": "BPA001390",
+    "unit": "NOS",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "PROFILE PROTECTOR FR BPR1 LH-YCA KIT",
+    "part_no": "BPA001388",
+    "unit": "NOS",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "PROFILE PROTECTOR FR BPR1 RH-YCA KIT",
+    "part_no": "BPA001389",
+    "unit": "NOS",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "DSA TAPE EX4011 AFT (4MM X 10 MTR)",
+    "part_no": "BPA001257",
+    "unit": "",
+    "qty": 1.38
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "DSA TAPE EX4011 AFT (6MM X 10 MTR)",
+    "part_no": "BPA001258",
+    "unit": "",
+    "qty": 0.58
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "DSA TAPE EX 4011 (8MMX10MTR)-YBA",
+    "part_no": "BPA000952",
+    "unit": "",
+    "qty": 1.09
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "FLANGE HEX BOLT M6X20 YSD HB SPOILER",
+    "part_no": "BPB000845",
+    "unit": "",
+    "qty": 3
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "PLASTIC RIVET-015269000YSD NB SIDE SKIRT",
+    "part_no": "BPA001118",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "S.T Screw Truss 5X10 (Yellow/Trivalent)",
+    "part_no": "BPB000803",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": " PLASTIC BKT FR BPR PROTECTOR UPPER YCA",
+    "part_no": "BPA003098",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "Plastic clip 7.0mm dia",
+    "part_no": "BPA001492",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "Trim Clip (60432) YCA BODY KIT",
+    "part_no": "BPA001260",
+    "unit": "",
+    "qty": 6
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "CLIP TEMPLATE - YSD NB BODY KIT",
+    "part_no": "BPA001180",
+    "unit": "",
+    "qty": 6
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "STICKY POLYTHENE 7\" X 10\"",
+    "part_no": "PMB000060",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "YCA ADDON FR PROTECTOR CASA RH 22PIM281",
+    "part_no": "BPA001421",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "YCA ADDON FR PROTECTOR CASA LH 22PIM280",
+    "part_no": "BPA001420",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "ADHESION PROMOTER (PRIMER K-520)",
+    "part_no": "RMG000002",
+    "unit": "",
+    "qty": 0.001
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "POLYTHENE BAG  14\"x56\" per pcs",
+    "part_no": "PMB000200",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "POLYTHENE BAG  48\"X9\" per pcs",
+    "part_no": "PMB000192",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "CH",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "PACKING BOX(1190X360X100MM)-YCA",
+    "part_no": "PMA100485",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "ROLLER MASKER 290 X 20MTR-YCA BODY KIT",
+    "part_no": "BPA001409",
+    "unit": "",
+    "qty": 0.074
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "ROLLER MASKER 100MMX20MTR",
+    "part_no": "BPA001754",
+    "unit": "",
+    "qty": 0.076
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "MASKING TAPE 35MM X 45 MTR",
+    "part_no": "COB000244",
+    "unit": "",
+    "qty": 0.02
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA FRONT BUMPER",
+    "part_name": "FINE LINER 6MM X 55MTR-YCA BODY KIT",
+    "part_no": "BPA001408",
+    "unit": "",
+    "qty": 0.017636363636363638
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "MOULDED REAR BUMPER (REAR)- YCA",
+    "part_no": "BPA003976",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "YCA CAP REAR BUMPER PROTECTOR CASA",
+    "part_no": "BPA001712",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "Screw (03542-0512A) ST M5x12 SAR Coating",
+    "part_no": "BPB000580",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "Speed Nut(U Clip)-YBA Body Kit",
+    "part_no": "BPA001053",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "Plastic clip 7.0mm dia",
+    "part_no": "BPA001492",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "Trim Clip (60432) YCA BODY KIT",
+    "part_no": "BPA001260",
+    "unit": "",
+    "qty": 7
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "CLIP TEMPLATE - YSD NB BODY KIT",
+    "part_no": "BPA001180",
+    "unit": "",
+    "qty": 7
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "MARKING PUNCH -YCA BODY KIT",
+    "part_no": "BPA001303",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "CLIP 09409-06L02-YL8 EXTENSION FRONT BUM",
+    "part_no": "BPA001115",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "STICKY POLYTHENE 7\" X 10\"",
+    "part_no": "PMB000060",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "ADHESION PROMOTER (PRIMER K-520)",
+    "part_no": "RMG000002",
+    "unit": "",
+    "qty": 0.001
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "PROFILE PROTECTOR RR BPR -YCA BODY KIT",
+    "part_no": "BPA001391",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "YCA ADDON RR PROTECTOR CAS3A LH 22PIM283",
+    "part_no": "BPA001417",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "YCA ADDON RR PROTECTOR CASA RH 22PIM282",
+    "part_no": "BPA001418",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "YCA ADDON RR PR CASA CTR 22PIM281",
+    "part_no": "BPA001419",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "POLYTHENE BAG  52\"X10\" per pcs",
+    "part_no": "PMB000191",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "PACKING BOX(1230X215X85MM)-YCA",
+    "part_no": "PMA100486",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "DIE CUT TAPE LH- YCA BODY KIT",
+    "part_no": "BPA001410",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "DIE CUT TAPE RH- YCA BODY KIT",
+    "part_no": "BPA001411",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "FINE LINER 6MM X 55MTR-YCA BODY KIT",
+    "part_no": "BPA001408",
+    "unit": "",
+    "qty": 0.04454545454545455
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA REAR BUMPER PROTECTOR",
+    "part_name": "MASKING TAPE 35MM X 45 MTR",
+    "part_no": "COB000244",
+    "unit": "",
+    "qty": 0.022222222222222223
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED HB SIDE SKIRT",
+    "part_name": "MOULDED YED HB SIDE SKIRT LH",
+    "part_no": "HYEDHBSIDELH",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED HB SIDE SKIRT",
+    "part_name": "MOULDED YED HB SIDE SKIRT RH",
+    "part_no": "HYEDHBSIDERH",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB SIDE SKIRT",
+    "part_name": "CLIP SIDE SILL SPLASH GUARD ",
+    "part_no": "BPA000020",
+    "unit": "",
+    "qty": 8
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB SIDE SKIRT",
+    "part_name": "CLIP 71812-78 FOD",
+    "part_no": "BPA000670",
+    "unit": "",
+    "qty": 14
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB SIDE SKIRT",
+    "part_name": "CLIP TEMPLATET-YSD NB BODY KIT",
+    "part_no": "BPA001180",
+    "unit": "",
+    "qty": 7
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB SIDE SKIRT",
+    "part_name": "PLASTIC CLIP 7.0MM DIA",
+    "part_no": "BPA001492",
+    "unit": "",
+    "qty": 8
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB SIDE SKIRT",
+    "part_name": "DSA TAPE LINER REMOVER",
+    "part_no": "BPA001523",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB SIDE SKIRT",
+    "part_name": "PROTECTOR 1 SIDE SPL (L-1640MM) YED HB",
+    "part_no": "BPA003853",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB SIDE SKIRT",
+    "part_name": "DSA TAPE 4011-10MM",
+    "part_no": "BPA000659",
+    "unit": 112,
+    "qty": 0.56
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB SIDE SKIRT",
+    "part_name": "INS MANUL SIDE UNDER SPOILER YED ",
+    "part_no": "PMD000696",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB SIDE SKIRT",
+    "part_name": "POLYTHENE BAG 3*9\"",
+    "part_no": "PMB000231",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB SIDE SKIRT",
+    "part_name": "SIDE UNDER SPL POLYTHENE YED HB 9*73",
+    "part_no": "PMB000361",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB SIDE SKIRT",
+    "part_name": "SIDE UNDER SPL BOX 1750*170*150",
+    "part_no": "PMA100863",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "MOULDED YED HB FRONT TPYE 1",
+    "part_no": "BPA003977",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "GARNISH CHROME FRONT TYPE -1 YED HB",
+    "part_no": "BPA003879",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "DSA TAPE LINER REMOVER",
+    "part_no": "BPA001523",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "FLANGE NUT M5",
+    "part_no": "BPB000055",
+    "unit": "",
+    "qty": 7
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "POLYTHENE BAG 3\"*9\"",
+    "part_no": "PMB000231",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "INS. MANUAL FR. BODY SPOILER TYPE 1 YED HB",
+    "part_no": "PMD000693",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "SQUARE HEADED BOLT M5*12",
+    "part_no": "BPA001412",
+    "unit": "",
+    "qty": 7
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "PROTECTOR 1 FR TYPE 1( L=1094MM)YED HB",
+    "part_no": "BPA003846",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "PROTECTOR 2 FR TYPE 1( L=123MM)YED HB",
+    "part_no": "BPA003847",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "DSA TAPE EX4011 AFT 8MM*10MTR-YBA",
+    "part_no": "BPA000952",
+    "unit": "",
+    "qty": 1.05
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "ADHESION PROMER PRIMER",
+    "part_no": "RMG000002",
+    "unit": "",
+    "qty": 0.002
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "FR BUMPER TY1 POLYTHENE YED HB 5*52 IN",
+    "part_no": "PMB000360",
+    "unit": "nos",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "FR UNDER SPL BOX TP1-1210*155*100 YED HB",
+    "part_no": "PMA100862",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YED HB FRONT TYPE-1",
+    "part_name": "PAINT GREY NIGHT GREY",
+    "part_no": 1022825,
+    "unit": "",
+    "qty": 0.04
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "MOULDED YED NB FRONT SPOILER",
+    "part_no": "BPA003997",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "CHROME INSERT RH,FRONT BUMPER SPL YED NB",
+    "part_no": "BPA003938",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "CHROME INSERT LH,FRONT BUMPER SPL YED NB",
+    "part_no": "BPA003939",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "COPPER RH,FRONT BUMPER SPL YED NB",
+    "part_no": "BPA003938",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "COPPER LH,FRONT BUMPER SPL YED NB",
+    "part_no": "BPA003939",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "MOULDED ADD ON YED NB FR 1 (RH)",
+    "part_no": "BPA003962",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "MOULDED ADD ON YED NB FR 1 (LH)",
+    "part_no": "BPA003963",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "MOULDED ADD ON YED NB FR 2 (RH)",
+    "part_no": "BPA003964",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "MOULDED ADD ON YED NB FR 2 (LH)",
+    "part_no": "BPA003965",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "MOULDED ADD ON YED NB FR 3 (RH)",
+    "part_no": "BPA003966",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "MOULDED ADD ON YED NB FR 3 (LH)",
+    "part_no": "BPA003967",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "PACKING BOX(1640X70X330)MM YED NB FR",
+    "part_no": "PMA100917",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "POLYBAG (1950X100)MM YED NB FR",
+    "part_no": "PMB000383",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "POLYTHENE BAG 3\"X9\"",
+    "part_no": "PMB000231",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "PROFILE PROTECTOR YED NB FR (L-1910 MM)",
+    "part_no": "BPA003958",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "DSA TAPE GT7112 ( 08mm x 10MTR)",
+    "part_no": "BPA000492",
+    "unit": "",
+    "qty": 0.27
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "ADHESION PROMOTER (PRIMER K-520)",
+    "part_no": "RMG000002",
+    "unit": "",
+    "qty": 0.003
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "ISO PROPYL ALCOHOL(I P A)",
+    "part_no": "RMB300004",
+    "unit": "",
+    "qty": 0.005
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "SQUARE HEADED BOLT (M5X12)",
+    "part_no": "BPA001412",
+    "unit": "",
+    "qty": 3
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "S.T Screw Truss 5X10 (Yellow/Trivalent)",
+    "part_no": "BPB000803",
+    "unit": "",
+    "qty": 4
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "FLANGE NUT M5",
+    "part_no": "BPB000055",
+    "unit": "",
+    "qty": 3
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "INSTALLATION MANUAL YED NB FR BUMP SPL",
+    "part_no": "PMD000708",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB FRONT BUMPER SPOILER",
+    "part_name": "DSA TAPE LINER REMOVER",
+    "part_no": "BPA001523",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "MOULDED YEDNB SIDE SKIRT RH",
+    "part_no": "BPA003999",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "MOULDED YEDNB SIDE SKIRT LH",
+    "part_no": "BPA004000",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "PROFILE PROTECTOR YEDNB SIDE (L-1798MM)",
+    "part_no": "BPA003961",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "DSA TAPE EX 4011 (12MMX10MTR)",
+    "part_no": "BPA003946",
+    "unit": "",
+    "qty": 0.82
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "CLIP 71812-78 FOO",
+    "part_no": "BPA000670",
+    "unit": "",
+    "qty": 16
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "CLIP SIDE SILL SPLASH GUARD 09409M15L01",
+    "part_no": "BPA000020",
+    "unit": "",
+    "qty": 8
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "Plastic clip 7.0mm dia",
+    "part_no": "BPA001492",
+    "unit": "",
+    "qty": 6
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "PLASTIC RIVET-015269000YSD NB SIDE SKIRT",
+    "part_no": "BPA001118",
+    "unit": "",
+    "qty": 4
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "ISO PROPYL ALCOHOL(I P A)",
+    "part_no": "RMB300004",
+    "unit": "",
+    "qty": 0.004
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "ADHESION PROMOTER (PRIMER K-520)",
+    "part_no": "RMG000002",
+    "unit": "",
+    "qty": 0.006
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "CLIP TEMPLATE - YSD NB BODY KIT",
+    "part_no": "BPA001180",
+    "unit": "",
+    "qty": 8
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "INSTALLATION MANUAL YED NB SIDE SKIRT",
+    "part_no": "PMD000707",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "DSA TAPE LINER REMOVER",
+    "part_no": "BPA001523",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "STICKY POLYTHENE  6''X8'', 30 Micron",
+    "part_no": "PCON-2301-0094",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "PKG BOX (1790X140X190)MM YEDNB SIDE SKIT",
+    "part_no": "PMA100925",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "C BLOCK (185X135X55)MM YED NB SIDE",
+    "part_no": "PMA100926",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "POLYBAG (1960X240)MM YED NB SIDE SKIRT",
+    "part_no": "PMB000382",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YED NB SIDE SKIRT",
+    "part_name": "R-160 MOCHA MATELIC BROWN",
+    "part_no": "paint zzfnutmeg br",
+    "unit": "",
+    "qty": 0.15
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "MOULDED YEDNB RR BUMPER SPOILER",
+    "part_no": "BPA003998",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "CHROME INSERT RH,REAR BUMPER SPL YED NB",
+    "part_no": "BPA003940",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "CHROME INSERT LH,REAR BUMPER SPL YED NB",
+    "part_no": "BPA003941",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "COPPER RH,REAR BUMPER SPL YED NB",
+    "part_no": "BPA003940",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "COPPER LH,REAR BUMPER SPL YED NB",
+    "part_no": "BPA003941",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "PROFILE PROTECTORYED NB RR (L-1820 MM)",
+    "part_no": "BPA003959",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "PROFILE PROTECTOR YED NB RR  (L-388 MM)",
+    "part_no": "BPA003960",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "DSA TAPE GT7112 ( 08mm x 10MTR)",
+    "part_no": "BPA000492",
+    "unit": "",
+    "qty": 0.434
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "SPEED NUT No 1.",
+    "part_no": "BPB001481",
+    "unit": "",
+    "qty": 9
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "SCREW M5X12 (MFZNNI5K+K)",
+    "part_no": "BPB900110",
+    "unit": "",
+    "qty": 9
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "ISO PROPYL ALCOHOL(I P A)",
+    "part_no": "RMB300004",
+    "unit": "",
+    "qty": 0.004
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "INSTALLATION MANUALYED NB RR BUMP SPL",
+    "part_no": "PMD000709",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "DSA TAPE LINER REMOVER",
+    "part_no": "BPA001523",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "STAR CLIP (OD-16,T-0.3)",
+    "part_no": "BPA003947",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "MARKING PUNCH -YCA BODY KIT",
+    "part_no": "BPA001303",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "POLYTHENE BAG 3\"X9\"",
+    "part_no": "PMB000231",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "ADHESION PROMOTER (PRIMER K-520)",
+    "part_no": "RMG000002",
+    "unit": "",
+    "qty": 0.003
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "PACKING BOX(1620X85X320)MM YED NB RR",
+    "part_no": "PMA100921",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YED NB REAR BUMPER SPOILER",
+    "part_name": "POLYBAG (1710X345)MM YED NB RR",
+    "part_no": "PMB000384",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "MOULDED SIDE SKIRT RH-YCA",
+    "part_no": "HYCASIDERH",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "MOULDED SIDE SKIRT LH-YCA",
+    "part_no": "HYCASIDELH",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "PLASTIC RIVET-015269000YSD NB SIDE SKIRT",
+    "part_no": "BPA001118",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "S.T Screw Truss 5X10 (Yellow/Trivalent)",
+    "part_no": "BPB000803",
+    "unit": "",
+    "qty": 8
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "CLIP SIDE SILL SPLASH GUARD 09409M15L01",
+    "part_no": "BPA000020",
+    "unit": "",
+    "qty": 8
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "SIDE SKIRT PLASTIC BRACKET FR YCA KIT",
+    "part_no": "BPA003095",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "SIDE SKIRT PLASTIC BRACKET RR YCA KIT",
+    "part_no": "BPA003096",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "SIDE SKIRT PLASTIC BRACKET CTR YCA KIT",
+    "part_no": "BPA003097",
+    "unit": "",
+    "qty": 4
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "STICKY POLYTHENE 7\" X 10\"",
+    "part_no": "PMB000060",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-1 22PIM276",
+    "part_no": "BPA001422",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-2 22PIM277",
+    "part_no": "BPA001424",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-3 22PIM278",
+    "part_no": "BPA001426",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-4 22PIM279",
+    "part_no": "BPA001428",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-5 22PIM279",
+    "part_no": "BPA001429",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-6 22PIM278",
+    "part_no": "BPA001427",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-7 22PIM277",
+    "part_no": "BPA001425",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA SIDE SKIRT ATTACHMENT-8 22PIM276",
+    "part_no": "BPA001423",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "PROFILE PROTECTOR SIDE SKIRT RH-YCA KIT",
+    "part_no": "BPA001392",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "DSA TAPE EX 4011 (8MMX10MTR)-YBA",
+    "part_no": "BPA000952",
+    "unit": "",
+    "qty": 1.34
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "DSA TAPE EX 4011 (8MMX10MTR)-YBA",
+    "part_no": "BPA000952",
+    "unit": "",
+    "qty": 1.34
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "ADHESION PROMOTER (PRIMER K-520)",
+    "part_no": "RMG000002",
+    "unit": "",
+    "qty": 0.001
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "POLYTHENE BAG  71\"X9\" per pcs",
+    "part_no": "PMB000194",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "FINE LINER 6MM X 55MTR-YCA BODY KIT",
+    "part_no": "BPA001408",
+    "unit": "",
+    "qty": 3.2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "ROLLER MASKER 290 X 20MTR-YCA BODY KIT",
+    "part_no": "BPA001409",
+    "unit": "",
+    "qty": 2.4
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "ROLLER MASKER 100MMX20MTR",
+    "part_no": "BPA001754",
+    "unit": "",
+    "qty": 2.78
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "MASKING TAPE 35MM X 45 MTR",
+    "part_no": "COB000244",
+    "unit": "",
+    "qty": 2.4
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "MOULDED FR UPPER PART - YCA",
+    "part_no": "BPA001573",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "MOULDED REAR BUMPER (FRONT LOWER)- YCA",
+    "part_no": "BPA003975",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "PROFILE PROTECTOR FR BPR PART 2-YCA KIT",
+    "part_no": "BPA001390",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "PROFILE PROTECTOR FR BPR1 LH-YCA KIT",
+    "part_no": "BPA001388",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "PROFILE PROTECTOR FR BPR1 RH-YCA KIT",
+    "part_no": "BPA001389",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "DSA TAPE EX4011 AFT (4MM X 10 MTR)",
+    "part_no": "BPA001257",
+    "unit": "",
+    "qty": 1.38
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "DSA TAPE EX4011 AFT (6MM X 10 MTR)",
+    "part_no": "BPA001258",
+    "unit": "",
+    "qty": 0.58
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "DSA TAPE EX 4011 (8MMX10MTR)-YBA",
+    "part_no": "BPA000952",
+    "unit": "",
+    "qty": 1.09
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "3M Tape EX 4015 (8MM X 10 MTR)",
+    "part_no": "BPA000701",
+    "unit": "",
+    "qty": 0
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "FLANGE HEX BOLT M6X20 YSD HB SPOILER",
+    "part_no": "BPB000845",
+    "unit": "",
+    "qty": 3
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "PLASTIC RIVET-015269000YSD NB SIDE SKIRT",
+    "part_no": "BPA001118",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "S.T Screw Truss 5X10 (Yellow/Trivalent)",
+    "part_no": "BPB000803",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": " PLASTIC BKT FR BPR PROTECTOR UPPER YCA",
+    "part_no": "BPA003098",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "Plastic clip 7.0mm dia",
+    "part_no": "BPA001492",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "Trim Clip (60432) YCA BODY KIT",
+    "part_no": "BPA001260",
+    "unit": "",
+    "qty": 6
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "CLIP TEMPLATE - YSD NB BODY KIT",
+    "part_no": "BPA001180",
+    "unit": "",
+    "qty": 6
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "STICKY POLYTHENE 7\" X 10\"",
+    "part_no": "PMB000060",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA ADDON FR PROTECTOR CASA RH 22PIM280",
+    "part_no": "BPA001421",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA ADDON FR PROTECTOR CASA LH 22PIM280",
+    "part_no": "BPA001420",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "ADHESION PROMOTER (PRIMER K-520)",
+    "part_no": "RMG000002",
+    "unit": "",
+    "qty": 0.001
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "POLYTHENE BAG  14\"x56\" per pcs",
+    "part_no": "PMB000200",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "POLYTHENE BAG  48\"X9\" per pcs",
+    "part_no": "PMB000192",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "ROLLER MASKER 290 X 20MTR-YCA BODY KIT",
+    "part_no": "BPA001409",
+    "unit": "",
+    "qty": 0.74
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "ROLLER MASKER 100MMX20MTR",
+    "part_no": "BPA001754",
+    "unit": "",
+    "qty": 0.76
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "MASKING TAPE 35MM X 45 MTR",
+    "part_no": "COB000244",
+    "unit": "",
+    "qty": 0.9
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "FINE LINER 6MM X 55MTR-YCA BODY KIT",
+    "part_no": "BPA001408",
+    "unit": "",
+    "qty": 0.97
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "MOULDED REAR BUMPER (REAR)- YCA",
+    "part_no": "BPA003976",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA CAP REAR BUMPER PROTECTOR CASA",
+    "part_no": "BPA001712",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "Screw (03542-0512A) ST M5x12 SAR Coating",
+    "part_no": "BPB000580",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "Speed Nut(U Clip)-YBA Body Kit",
+    "part_no": "BPA001053",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "Plastic clip 7.0mm dia",
+    "part_no": "BPA001492",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "Trim Clip (60432) YCA BODY KIT",
+    "part_no": "BPA001260",
+    "unit": "",
+    "qty": 7
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "CLIP TEMPLATE - YSD NB BODY KIT",
+    "part_no": "BPA001180",
+    "unit": "",
+    "qty": 7
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "MARKING PUNCH -YCA BODY KIT",
+    "part_no": "BPA001303",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "CLIP 09409-06L02-YL8 EXTENSION FRONT BUM",
+    "part_no": "BPA001115",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "STICKY POLYTHENE 7\" X 10\"",
+    "part_no": "PMB000060",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "ADHESION PROMOTER (PRIMER K-520)",
+    "part_no": "RMG000002",
+    "unit": "",
+    "qty": 0.001
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "PROFILE PROTECTOR RR BPR -YCA BODY KIT",
+    "part_no": "BPA001391",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA ADDON RR PROTECTOR CASA LH 22PIM282",
+    "part_no": "BPA001417",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA ADDON RR PROTECTOR CASA RH 22PIM282",
+    "part_no": "BPA001418",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "YCA ADDON RR PR CASA CTR 22PIM281",
+    "part_no": "BPA001419",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PACKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "POLYTHENE BAG  52\"X10\" per pcs",
+    "part_no": "PMB000191",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "DIE CUT TAPE LH- YCA BODY KIT",
+    "part_no": "BPA001410",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "DIE CUT TAPE RH- YCA BODY KIT",
+    "part_no": "BPA001411",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "FINE LINER 6MM X 55MTR-YCA BODY KIT",
+    "part_no": "BPA001408",
+    "unit": "",
+    "qty": 2.45
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YCA ROBUST KIT",
+    "part_name": "MASKING TAPE 35MM X 45 MTR",
+    "part_no": "COB000244",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "Y1K FRONT",
+    "part_name": "Y1K BSM FRONT RH",
+    "part_no": "BPA001697",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "Y1K FRONT",
+    "part_name": "Y1K BSM FRONT LH",
+    "part_no": "BPA001698",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K FRONT",
+    "part_name": "SOFLAX PRIMMER ",
+    "part_no": "PND000042",
+    "unit": "",
+    "qty": 0.015
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K FRONT",
+    "part_name": "PAINT 1K MICA B/C MIDNIGHT BLACK",
+    "part_no": "PNA000052",
+    "unit": "",
+    "qty": 0.025
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K FRONT",
+    "part_name": "PAINT NEW ORANGE ZZT",
+    "part_no": "PNA000245",
+    "unit": "",
+    "qty": 0.015
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K FRONT",
+    "part_name": "PAINT SILVER ZML",
+    "part_no": "PNA000254",
+    "unit": "",
+    "qty": 0.015
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K FRONT",
+    "part_name": "THINNER T-5",
+    "part_no": "PNB000017",
+    "unit": "",
+    "qty": 0.007
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K FRONT",
+    "part_name": "THINNER T-1",
+    "part_no": "PNB000036",
+    "unit": "",
+    "qty": 0.015
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K FRONT",
+    "part_name": "THINNER P3 FOR PRIMER ",
+    "part_no": "PNB000029",
+    "unit": "",
+    "qty": 0.0075
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K FRONT",
+    "part_name": "THINNER FOR PAINT ZML",
+    "part_no": "PNB000062",
+    "unit": "",
+    "qty": 0.009
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K FRONT",
+    "part_name": "HARDNER CLEAR",
+    "part_no": "PND000014",
+    "unit": "",
+    "qty": 0.002
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K FRONT",
+    "part_name": "CLEAR KNP",
+    "part_no": "PNE000003",
+    "unit": "",
+    "qty": 0.012
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K FRONT",
+    "part_name": "DSA TAPE GT7108 AFT (9MM*11 MTR)",
+    "part_no": "BPA003101",
+    "unit": "",
+    "qty": 2.06
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K FRONT",
+    "part_name": "DSA TAPE LINER REMOVER",
+    "part_no": "BPA001523",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K FRONT",
+    "part_name": "PRIMER K520 PERMOTER",
+    "part_no": "RMG000024",
+    "unit": "ML",
+    "qty": 0.01
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K FRONT",
+    "part_name": "POLYTHENE BAG 43\"*5.5\"",
+    "part_no": "PMB000198",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K FRONT",
+    "part_name": "ROLLER MASKING (60MM*20MTR)",
+    "part_no": "BPA00163",
+    "unit": "",
+    "qty": 0.8
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K FRONT",
+    "part_name": "Y1K BSM FR & RR DIE CUT-1A",
+    "part_no": "BPA001626",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K FRONT",
+    "part_name": "Y1K BSM FR & RR DIE CUT-1B LH",
+    "part_no": "BPA001627",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K FRONT",
+    "part_name": "Y1K BSM FR & RR DIE CUT-1B RH",
+    "part_no": "BPA001628",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K FRONT",
+    "part_name": "PACKING BOX 890*400*420MM",
+    "part_no": "PMA900038",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K FRONT",
+    "part_name": "DSA TAPE EX4008(10MM*10MTR)",
+    "part_no": "BPA001493",
+    "unit": "",
+    "qty": 0.09
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "Y1K REAR",
+    "part_name": "Y1K BSM REAR RH",
+    "part_no": "BPA001699",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "Y1K REAR",
+    "part_name": "Y1K BSM REAR LH",
+    "part_no": "BPA001700",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K REAR",
+    "part_name": "SOFLAX PRIMMER ",
+    "part_no": "PND000042",
+    "unit": "",
+    "qty": 0.015
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K REAR",
+    "part_name": "PAINT 1K MICA B/C MIDNIGHT BLACK",
+    "part_no": "PNA000052",
+    "unit": "",
+    "qty": 0.01
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K REAR",
+    "part_name": "PAINT NEW ORANGE ZZT",
+    "part_no": "PNA000245",
+    "unit": "",
+    "qty": 0.01
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K REAR",
+    "part_name": "PAINT SILVER ZML",
+    "part_no": "PNA000254",
+    "unit": "",
+    "qty": 0.01
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K REAR",
+    "part_name": "THINNER T-5",
+    "part_no": "PNB000017",
+    "unit": "",
+    "qty": 0.006
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K REAR",
+    "part_name": "THINNER T-1",
+    "part_no": "PNB000036",
+    "unit": "",
+    "qty": 0.005
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K REAR",
+    "part_name": "THINNER P3 FOR PRIMER ",
+    "part_no": "PNB000029",
+    "unit": "",
+    "qty": 0.004
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K REAR",
+    "part_name": "THINNER FOR PAINT ZML",
+    "part_no": "PNB000062",
+    "unit": "",
+    "qty": 0.0015
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K REAR",
+    "part_name": "HARDNER CLEAR",
+    "part_no": "PND000014",
+    "unit": "",
+    "qty": 0.002
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "Y1K REAR",
+    "part_name": "CLEAR KNP",
+    "part_no": "PNE000003",
+    "unit": "",
+    "qty": 0.01
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K REAR",
+    "part_name": "FINE LINER 6MM",
+    "part_no": "BPA001408",
+    "unit": "",
+    "qty": 0.4
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K REAR",
+    "part_name": "DSA TAPE GT7108 AFT (9MM*11 MTR)",
+    "part_no": "BPA003101",
+    "unit": "",
+    "qty": 0.99
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K REAR",
+    "part_name": "DSA TAPE LINER REMOVER",
+    "part_no": "BPA001523",
+    "unit": "",
+    "qty": 0
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K REAR",
+    "part_name": "PRIMER K520 PERMOTER",
+    "part_no": "RMG000024",
+    "unit": "ML",
+    "qty": 0.01
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K REAR",
+    "part_name": "POLYTHENE BAG 22\"*5.5\"",
+    "part_no": "PMB000199",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K REAR",
+    "part_name": "ROLLER MASKING (60MM*20MTR)",
+    "part_no": "BPA00163",
+    "unit": "",
+    "qty": 0.1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K REAR",
+    "part_name": "Y1K BSM FR & RR DIE CUT-1A",
+    "part_no": "BPA001626",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K REAR",
+    "part_name": "Y1K BSM FR & RR DIE CUT-1B LH",
+    "part_no": "BPA001627",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K REAR",
+    "part_name": "Y1K BSM FR & RR DIE CUT-1B RH",
+    "part_no": "BPA001628",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K REAR",
+    "part_name": "PACKING BOX 890*400*420MM",
+    "part_no": "PMA900038",
+    "unit": "",
+    "qty": 0
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "Y1K REAR",
+    "part_name": "DSA TAPE EX4008(10MM*10MTR)",
+    "part_no": "BPA001493",
+    "unit": "MM",
+    "qty": 0.9
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YTA REAR",
+    "part_name": "MOULDED REAR SKID PLATE-YTA",
+    "part_no": "BPA003422",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA REAR",
+    "part_name": "FINE LINER 6MM*55MTR",
+    "part_no": "BPA001408",
+    "unit": "",
+    "qty": 0.001
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YTA REAR",
+    "part_name": "ROLLER MASKAR 290*20MTR",
+    "part_no": "BPA001409",
+    "unit": "",
+    "qty": 0.006
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA REAR",
+    "part_name": "POLYBAG 6*44",
+    "part_no": "PMB000282",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA REAR",
+    "part_name": "YTA REAR PACKING BOX 1080*160*70 MSIL",
+    "part_no": "PMA100686",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA REAR",
+    "part_name": "YTA REAR PACKING BOX 1080*165*85 TKM(EXPORT& TOYOTA)",
+    "part_no": "PMA100743",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA REAR",
+    "part_name": "BOLT M5*16 K+K",
+    "part_no": "BPB001627",
+    "unit": "",
+    "qty": 5
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA REAR",
+    "part_name": "POLYTHENE BAG 3\"*9\"",
+    "part_no": "PMB000231",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA REAR",
+    "part_name": "BOLT M5*12K+K",
+    "part_no": "BPB001484",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA REAR",
+    "part_name": "DSA TAPE LINE REMOVER",
+    "part_no": "BPA001523",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA REAR",
+    "part_name": "FLANGE NUT M5",
+    "part_no": "BPB001480",
+    "unit": "",
+    "qty": 12
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA REAR",
+    "part_name": "Y1K CASHION PAD 20*10*3",
+    "part_no": "BPA001603",
+    "unit": "",
+    "qty": 6
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA REAR",
+    "part_name": "25PIM 1144 PROTECTOR YTA BODY KIT REAR",
+    "part_no": "BPA003160",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA REAR",
+    "part_name": "MANUEL REAR TKM",
+    "part_no": "PMD000593",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA REAR",
+    "part_name": "MANUEL REAR ",
+    "part_no": "PMD000593",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA REAR",
+    "part_name": "PAINT 1K MICA MIDNIGHT BLACK",
+    "part_no": "PNA000052",
+    "unit": "",
+    "qty": 0.06
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA REAR",
+    "part_name": "PAINT 1K MET BC BLUISH PRL BLACK WB3",
+    "part_no": "PNA000052A",
+    "unit": "",
+    "qty": 0.06
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA REAR",
+    "part_name": "PAINT GLISTENING GREY ZNZ",
+    "part_no": "PNA000066",
+    "unit": "",
+    "qty": 0.04
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA REAR",
+    "part_name": "PAINT CHAMPAGNE WBJ",
+    "part_no": "PNA000293",
+    "unit": "",
+    "qty": 0.04
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA REAR",
+    "part_name": "THINNER T-1",
+    "part_no": "PNB000036",
+    "unit": "",
+    "qty": 0.027999999999999997
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA REAR",
+    "part_name": "THINNER T-5",
+    "part_no": "PNB000017",
+    "unit": "",
+    "qty": 0.027999999999999997
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA REAR",
+    "part_name": "SOFLAX PRIMMER ",
+    "part_no": "PND000042",
+    "unit": "",
+    "qty": 0.015
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA REAR",
+    "part_name": "CLEAR KNP",
+    "part_no": "PNE000003",
+    "unit": "",
+    "qty": 0.05
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA REAR",
+    "part_name": "THINNER T-5",
+    "part_no": "PNB000017",
+    "unit": "",
+    "qty": 0.020000000000000004
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA REAR",
+    "part_name": "HARDNER CLEAR",
+    "part_no": "PND000014",
+    "unit": "",
+    "qty": 0.015
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA REAR",
+    "part_name": "PU THINNER",
+    "part_no": "PNB900001",
+    "unit": "",
+    "qty": 0
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA REAR",
+    "part_name": "SOFLAX PRIMMER ",
+    "part_no": "PND000042",
+    "unit": "",
+    "qty": 0.03
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA REAR",
+    "part_name": "THINNER P3 FOR PRIMER",
+    "part_no": "PNB000029",
+    "unit": "",
+    "qty": 0.015
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MOULDED",
+    "group_name": "YTA FRONT",
+    "part_name": "MOULDED FRONT SKID PLATE-YTA",
+    "part_no": "BPA003421",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YTA FRONT",
+    "part_name": "FINE LINER 6MM*55MTR",
+    "part_no": "BPA001408",
+    "unit": "",
+    "qty": 0.001
+  },
+  {
+    "source": "Sheet1",
+    "specification": "MASKING",
+    "group_name": "YTA FRONT",
+    "part_name": "ROLLER MASKAR 290*20MTR",
+    "part_no": "BPA001409",
+    "unit": "",
+    "qty": 0.067
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "SPEED NUT",
+    "part_no": "BPA001053",
+    "unit": 5000,
+    "qty": 5
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "YTA FRONT PACKING BOX 1100*200*170MM MSIL",
+    "part_no": "PMA100686",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "YTA FRONT PACKING BOX 1100*200*170MM TKM(EXPORT)",
+    "part_no": "PMA100687",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "POLYTHENE BAG 3\"*9\"",
+    "part_no": "PMB000231",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "BOLT M5*12K+K",
+    "part_no": "BPB001484",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "DSA TAPE LINE REMOVER",
+    "part_no": "BPA001523",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "POLYBAG 9.5*52\"",
+    "part_no": "PMB000280",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "FLANGE NUT M5",
+    "part_no": "BPB001480",
+    "unit": "",
+    "qty": 12
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "Y1K CASHION PAD 20*10*3",
+    "part_no": "BPA001603",
+    "unit": "",
+    "qty": 6
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "SCREW ST M5*12 SAR",
+    "part_no": "BPB000580",
+    "unit": "",
+    "qty": 5
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "DSA TAPE 1100-7*10 MTR",
+    "part_no": "BPA003104",
+    "unit": "",
+    "qty": 0
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "SCREW ST M5*20 K+K",
+    "part_no": "BPB001478",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "25PIM 1153 PROTECTOR YTA BODY KIT FRONT",
+    "part_no": "BPA003157",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "25PIM 1152 PROTECTOR YTA BODY KIT FRONT",
+    "part_no": "BPA003158",
+    "unit": "",
+    "qty": 2
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "25PIM 1151 PROTECTOR YTA BODY KIT FRONT",
+    "part_no": "BPA003159",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "BOP",
+    "group_name": "YTA FRONT",
+    "part_name": "MANUEL FRONT",
+    "part_no": "PMD000568",
+    "unit": "",
+    "qty": 1
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA FRONT",
+    "part_name": "PAINT 1K MICA MIDNIGHT BLACK",
+    "part_no": "PNA000052",
+    "unit": "",
+    "qty": 0.05
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA FRONT",
+    "part_name": "PAINT 1K MET BC BLUISH PRL BLACK WB3",
+    "part_no": "PNA000052A",
+    "unit": "",
+    "qty": 0.05
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA FRONT",
+    "part_name": "PAINT GLISTENING GREY",
+    "part_no": "PNA000066",
+    "unit": "",
+    "qty": 0.04
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA FRONT",
+    "part_name": "PAINT CHAMPAGNE WBJ",
+    "part_no": "PNA000293",
+    "unit": "",
+    "qty": 0.04
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA FRONT",
+    "part_name": "THINNER T-1",
+    "part_no": "PNB000036",
+    "unit": "",
+    "qty": 0.027999999999999997
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA FRONT",
+    "part_name": "SOFLAX PRIMMER ",
+    "part_no": "PND000042",
+    "unit": "",
+    "qty": 0.015
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA FRONT",
+    "part_name": "THINNER T-5",
+    "part_no": "PNB000017",
+    "unit": "",
+    "qty": 0.027999999999999997
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA FRONT",
+    "part_name": "CLEAR KNP",
+    "part_no": "PNE000003",
+    "unit": "",
+    "qty": 0.05
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA FRONT",
+    "part_name": "THINNER T-4",
+    "part_no": "PNB000016",
+    "unit": "",
+    "qty": 0.020000000000000004
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA FRONT",
+    "part_name": "HARDNER CLEAR",
+    "part_no": "PND000014",
+    "unit": "",
+    "qty": 0.015
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA FRONT",
+    "part_name": "PU THINNER",
+    "part_no": "PNB900001",
+    "unit": "",
+    "qty": 0
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA FRONT",
+    "part_name": "PRIMER SOFLEX 3500",
+    "part_no": "PND000042",
+    "unit": "",
+    "qty": 0.03
+  },
+  {
+    "source": "Sheet1",
+    "specification": "PAINT",
+    "group_name": "YTA FRONT",
+    "part_name": "THINNER P3 FOR PRIMER",
+    "part_no": "PNB000029",
+    "unit": "",
+    "qty": 0.015
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "Cushion Pad E1010(50x5x3)-YCA Body kit",
+    "part_name": "NOS",
+    "unit": 4,
+    "qty": 400
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "Plastic clip 7.0mm dia",
+    "part_name": "NOS",
+    "unit": 6,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PROTECTOR 1 RR W.BUMPER(L=420MM) YED HB",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PROTECTOR 2 RR W.BUMPER(L=423MM) YED HB",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PROTECTOR 3 RR W.BUMPER(L=429MM) YED HB",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PROTECTOR 4 RR W.BUMPER(L=452MM) YED HB",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "SELF TAPPING SCREW M5X20 (MFZNNI5K+K)",
+    "part_name": "NOS",
+    "unit": 6,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "SPEED NUT No 1.",
+    "part_name": "NOS",
+    "unit": 6,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "INS.MANUAL WHEEL ARC CLADDING YED HB",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "WHEEL ARC CLADD. BOX HB 780X290X110 PAINTED",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "FR FENDER POLYTHENE YED HB 5.5X39 INCH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "RR FENDER POLYTHENE YED HB 5.5X36 INCH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "FR BUMPER POLYTHENE YED HB 5.5X27 INCH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "RR BUMPER POLYTHENE YED HB 5.5X22 INCH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "RR DOOR POLYTHENE YED HB 3.5X20 INCH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "POLYTHENE BAG 3\"X9\"",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "DSA TAPE EX 4011 (8MMX10MTR)-YBA",
+    "part_name": "ROL",
+    "unit": 1.1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PROTECTOR 1 FR W.BUMPER(L=925MM)YED HB",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PROTECTOR 2 FR W.BUMPER(L=531MM) YED HB",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PLASTIC RIVET-015269000YSD NB SIDE SKIRT",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "DSA TAPE LINER REMOVER",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB WHEEL ARC FRONT BUMPER RH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB WHEEL ARC FRONT BUMPER LH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB WHEEL ARC REAR BUMPER RH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB WHEEL ARC REAR BUMPER LH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB WHEEL ARC FRONT FENDER RH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB WHEEL ARC FRONT FENDER LH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB WHEEL ARC REAR FENDER RH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB WHEEL ARC REAR FENDER LH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB WHEEL ARC REAR DOOR RH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB WHEEL ARC REAR DOOR LH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "YED HB REAR",
+    "part_name": "",
+    "unit": "",
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "Component Desc",
+    "part_name": " Unit",
+    "unit": "Component Qty",
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PROTECTOR 2 RR SPL(L=80MM) YED HB",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "SQUARE HEADED BOLT (M5X12)",
+    "part_name": "NOS",
+    "unit": 6,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "FLANGE NUT M5",
+    "part_name": "NOS",
+    "unit": 6,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "SCREW M5X12 (MFZNNI5K+K)",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PLASTIC RIVET-015269000YSD NB SIDE SKIRT",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "Plastic clip 7.0mm dia",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "ADHESION PROMOTER (PRIMER K-520)",
+    "part_name": "L",
+    "unit": 0.002,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "INS.MANUAL RR UNDER BODY SPOILER YED HB",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "REAR BUMPER POLYTHENE YED HB 11X76 INCH",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "Tape 3M GT 7108(8MM X 11MT)0.8MM",
+    "part_name": "M",
+    "unit": 0.1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PROTECTOR 1 RR SPL(L=1640MM) YED HB",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "POLYTHENE BAG 3\"X9\"",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PACKING BOX(1730X510X180) YEDHB BODYKIT",
+    "part_name": "NOS",
+    "unit": 0.5,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB REAR BUMPER SPOILER",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB TOW HOOK CAP",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB REAR BUMPER INSERT TYPE 2",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "RR UNDER SPL BOX 1700X160X290",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "Component Desc",
+    "part_name": "Unit",
+    "unit": "Component Qty",
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PROTECTOR 1 FR TYPE 2(L=990MM) YED HB",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PROTECTOR 2 FR TYPE 2(L=350MM) YED HB",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PROTECTOR 3 FR TYPE 2(L=118MM) YED HB",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "SQUARE HEADED BOLT (M5X12)",
+    "part_name": "NOS",
+    "unit": 3,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "FLANGE NUT M5",
+    "part_name": "NOS",
+    "unit": 3,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "Screw M5X20 PHI 36-05068",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "PLASTIC RIVET-015269000YSD NB SIDE SKIRT",
+    "part_name": "NOS",
+    "unit": 2,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "SCREW M5X12 (MFZNNI5K+K)",
+    "part_name": "NOS",
+    "unit": 6,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "ADHESION PROMOTER (PRIMER K-520)",
+    "part_name": "L",
+    "unit": 0.002,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "INS.MANUAL FR.BODY SPOILER TYPE 2 YED HB",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "FR BUMPER TY2 POLYTHENE YED HB 11X87 IN",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "POLYTHENE BAG 3\"X9\"",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "YED FRONT BOX 2  PAINTED (1725X145X480MM)",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  },
+  {
+    "source": "TYPE-2",
+    "specification": "",
+    "group_name": "TYPE-2 Component",
+    "part_no": "MOULDED YED HB FRONT BUMPER SPOILER",
+    "part_name": "NOS",
+    "unit": 1,
+    "qty": 0
+  }
+]
