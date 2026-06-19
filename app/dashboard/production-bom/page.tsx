@@ -79,9 +79,9 @@ export default function ProductionBOMPage() {
   }, [activeTab, search]);
 
   const groups = ['All', ...Array.from(new Set(items.map(item => item.group_name).filter(Boolean)))];
-  
+
   const filteredItems = activeTab === 'All' ? items : items.filter(item => item.group_name === activeTab);
-  
+
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
   const paginatedItems = filteredItems.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
@@ -93,12 +93,12 @@ export default function ProductionBOMPage() {
             <h1 className="text-xl font-bold text-foreground">📋 Bill of Materials (BOM)</h1>
             <p className="text-xs text-muted-foreground mt-0.5">View all required parts and materials for production</p>
           </div>
-          
+
           <div className="flex gap-4 items-center">
             <form onSubmit={handleSearch} className="flex gap-2 items-center">
-              <input 
-                type="text" 
-                placeholder="Search by part no or name..." 
+              <input
+                type="text"
+                placeholder="Search by part no or name..."
                 className="h-9 w-64 rounded-lg border border-input bg-background px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
@@ -110,30 +110,29 @@ export default function ProductionBOMPage() {
                 Clear
               </button>
             </form>
-            
+
             <div className="h-6 border-l border-border mx-1"></div>
-            
-            <button 
+
+            <button
               onClick={() => setShowModal(true)}
               className="h-9 px-4 flex items-center gap-2 rounded-lg bg-indigo-600 text-white font-semibold text-sm hover:bg-indigo-700 transition-colors"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="M12 5v14" /></svg>
               Add New
             </button>
           </div>
         </div>
-        
+
         {!loading && items.length > 0 && (
           <div className="mt-4 flex gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-muted-foreground/20 scrollbar-track-transparent">
             {groups.map((group: any) => (
               <button
                 key={group}
                 onClick={() => setActiveTab(group)}
-                className={`whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                  activeTab === group 
-                    ? 'bg-orange-500 text-white' 
+                className={`whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${activeTab === group
+                    ? 'bg-orange-500 text-white'
                     : 'bg-muted text-muted-foreground hover:bg-muted/80'
-                }`}
+                  }`}
               >
                 {group}
               </button>
@@ -173,7 +172,7 @@ export default function ProductionBOMPage() {
             </tbody>
           </table>
         </div>
-        
+
         {/* Pagination Controls */}
         {!loading && filteredItems.length > 0 && (
           <div className="flex items-center justify-between mt-auto">
@@ -181,19 +180,19 @@ export default function ProductionBOMPage() {
               Showing <span className="font-bold text-foreground">{(currentPage - 1) * itemsPerPage + 1}</span> to <span className="font-bold text-foreground">{Math.min(currentPage * itemsPerPage, filteredItems.length)}</span> of <span className="font-bold text-foreground">{filteredItems.length}</span> entries
             </div>
             <div className="flex gap-1">
-              <button 
+              <button
                 onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                 disabled={currentPage === 1}
                 className="px-3 py-1.5 rounded-lg border border-border bg-card hover:bg-muted text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Previous
               </button>
-              
+
               <div className="flex items-center px-3 font-semibold text-sm">
                 Page {currentPage} of {totalPages}
               </div>
-              
-              <button 
+
+              <button
                 onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                 disabled={currentPage === totalPages || totalPages === 0}
                 className="px-3 py-1.5 rounded-lg border border-border bg-card hover:bg-muted text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
@@ -206,11 +205,11 @@ export default function ProductionBOMPage() {
       </div>
 
       {/* Add New Part Side Panel */}
-      <div 
-        className={`fixed inset-0 bg-black/50 z-40 backdrop-blur-sm transition-opacity duration-300 ${showModal ? 'opacity-100 visible' : 'opacity-0 invisible'}`} 
+      <div
+        className={`fixed inset-0 bg-black/50 z-40 backdrop-blur-sm transition-opacity duration-300 ${showModal ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
         onClick={() => setShowModal(false)}
       />
-      <div 
+      <div
         className={`fixed inset-y-0 right-0 z-50 w-full max-w-md bg-card shadow-2xl border-l border-border flex flex-col transform transition-transform duration-300 ease-in-out ${showModal ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className="px-6 py-4 border-b border-border flex justify-between items-center bg-muted/50 flex-shrink-0">
@@ -219,75 +218,76 @@ export default function ProductionBOMPage() {
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
         </div>
-        
+
         <div className="p-6 overflow-y-auto flex-grow">
           <form id="add-part-form" onSubmit={handleAddPart} className="space-y-4">
             <div className="grid grid-cols-1 gap-4">
               <div>
                 <label className="block text-sm font-medium text-muted-foreground mb-1">Part Name *</label>
-                <input 
+                <input
                   type="text" required
                   className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
-                  value={newPart.part_name} onChange={e => setNewPart({...newPart, part_name: e.target.value})}
+                  value={newPart.part_name} onChange={e => setNewPart({ ...newPart, part_name: e.target.value })}
                 />
+
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium text-muted-foreground mb-1">Group (Category) *</label>
-                <input 
+                <input
                   type="text" required
                   className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
-                  value={newPart.group_name} onChange={e => setNewPart({...newPart, group_name: e.target.value})}
+                  value={newPart.group_name} onChange={e => setNewPart({ ...newPart, group_name: e.target.value })}
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium text-muted-foreground mb-1">Part No (Optional)</label>
-                <input 
+                <input
                   type="text" placeholder="Auto-generated if empty"
                   className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
-                  value={newPart.part_no} onChange={e => setNewPart({...newPart, part_no: e.target.value})}
+                  value={newPart.part_no} onChange={e => setNewPart({ ...newPart, part_no: e.target.value })}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-muted-foreground mb-1">Specification</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
-                  value={newPart.specification} onChange={e => setNewPart({...newPart, specification: e.target.value})}
+                  value={newPart.specification} onChange={e => setNewPart({ ...newPart, specification: e.target.value })}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-muted-foreground mb-1">Quantity</label>
-                <input 
+                <input
                   type="number" step="0.001"
                   className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
-                  value={newPart.qty} onChange={e => setNewPart({...newPart, qty: e.target.value})}
+                  value={newPart.qty} onChange={e => setNewPart({ ...newPart, qty: e.target.value })}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-muted-foreground mb-1">Unit (e.g., LTR, KGS)</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
-                  value={newPart.unit} onChange={e => setNewPart({...newPart, unit: e.target.value})}
+                  value={newPart.unit} onChange={e => setNewPart({ ...newPart, unit: e.target.value })}
                 />
               </div>
             </div>
           </form>
         </div>
-        
+
         <div className="px-6 py-4 border-t border-border bg-muted/30 flex justify-end gap-3 flex-shrink-0">
-          <button 
+          <button
             type="button" onClick={() => setShowModal(false)}
             className="px-4 py-2 rounded-lg border border-border bg-card hover:bg-muted font-medium text-sm transition-colors"
           >
             Cancel
           </button>
-          <button 
+          <button
             type="submit" form="add-part-form" disabled={adding}
             className="px-4 py-2 rounded-lg bg-orange-500 text-white hover:bg-orange-600 font-medium text-sm transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center gap-2"
           >
